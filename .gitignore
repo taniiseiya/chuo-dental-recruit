@@ -1,0 +1,7 @@
+node_modules/
+package-lock.json
+create-pptx.js
+package.json
+デザイン説明資料.pptx
+.DS_Store
+.claude/

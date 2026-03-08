@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中央歯科医院 求人採用サイト</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET ===== */
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:'Zen Maru Gothic',serif;
+      color:#2d4a3e;
+      line-height:1.9;
+      overflow-x:hidden;
+      background:#f7fbf9;
+    }
+    a{text-decoration:none;color:inherit;transition:opacity .3s;}
+    a:hover{opacity:.75;}
+    ul{list-style:none;}
+    img{max-width:100%;height:auto;display:block;}
+
+    /* ===== UTILITY ===== */
+    .main-wrapper{max-width:1100px;margin:0 auto;padding:0 24px;}
+    .tcenter{text-align:center;}
+    .row{display:flex;}
+    .repeat-grow1-1{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+    .radius-small{border-radius:20px;}
+    .radius-medium{border-radius:24px;}
+
+    /* English labels */
+    .hl-en{
+      font-family:'Montserrat',sans-serif;
+      font-size:1.2rem;font-weight:600;
+      letter-spacing:.1em;display:inline-block;margin-bottom:8px;
+    }
+    .hl-en-teal{color:#009688;}
+    .hl-en-orange{color:#f0981c;}
+    .hl-en::before{
+      content:'';display:inline-block;width:10px;height:10px;
+      border-radius:50%;margin-right:8px;vertical-align:middle;
+    }
+    .hl-en-teal::before{background:#009688;}
+    .hl-en-orange::before{background:#f0981c;}
+
+    /* Headings */
+    .headline{
+      font-size:2.25rem;font-weight:700;color:#2d4a3e;
+      line-height:1.55;margin-bottom:20px;
+    }
+    .lead{font-size:1rem;line-height:2;color:#3a5a4e;}
+
+    /* Buttons */
+    .teal-btn a{
+      display:inline-flex;align-items:center;gap:12px;
+      background:#009688;color:#fff;font-size:1.1rem;font-weight:600;
+      padding:20px 72px;border-radius:999px;
+      font-family:'Zen Maru Gothic',serif;transition:all .3s;
+    }
+    .teal-btn a:hover{opacity:.85;transform:translateY(-2px);}
+    .teal-btn a::after{
+      content:'';display:inline-block;width:32px;height:32px;
+      border:2px solid rgba(255,255,255,.5);border-radius:50%;
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E") center/16px no-repeat;
+    }
+    .orange-btn a{
+      display:inline-flex;align-items:center;gap:12px;
+      background:#f0981c;color:#fff;font-size:1.1rem;font-weight:600;
+      padding:20px 72px;border-radius:999px;
+      font-family:'Zen Maru Gothic',serif;transition:all .3s;
+    }
+    .orange-btn a:hover{opacity:.85;transform:translateY(-2px);}
+    .orange-btn a::after{
+      content:'';display:inline-block;width:32px;height:32px;
+      border:2px solid rgba(255,255,255,.5);border-radius:50%;
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E") center/16px no-repeat;
+    }
+
+    /* Arrow circle */
+    .arrow-circle{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:40px;height:40px;border:2px solid #009688;border-radius:50%;flex-shrink:0;
+    }
+    .arrow-circle svg{width:16px;height:16px;}
+
+    /* ===== HEADER ===== */
+    .site-header{
+      position:fixed;top:0;left:0;width:100%;z-index:1000;
+      background:#fff;transition:box-shadow .3s;
+      box-shadow:0 2px 12px rgba(0,0,0,.06);
+    }
+    .hd-wrapper{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:8px 24px;max-width:100%;
+    }
+    .hd-left{display:flex;flex-direction:column;}
+    .site-logo{display:flex;align-items:center;gap:6px;}
+    .site-logo img{height:54px;width:auto;}
+    .recruit-badge{
+      display:inline-block;border:2px solid #009688;color:#009688;
+      font-size:.75rem;font-weight:700;padding:2px 14px;border-radius:4px;margin-top:4px;
+    }
+    .gnav-list{display:flex;gap:24px;align-items:center;}
+    .gnav-list li a{
+      font-size:.95rem;font-weight:500;color:#2d4a3e;
+      position:relative;white-space:nowrap;
+    }
+    .hamburger{
+      width:54px;height:54px;background:#009688;border-radius:6px;border:none;cursor:pointer;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+    }
+    .hamburger span{display:block;width:22px;height:2px;background:#fff;}
+
+    /* ===== MAIN VISUAL ===== */
+    .main-visual{
+      margin-top:80px;position:relative;width:100%;
+      height:640px;overflow:hidden;
+    }
+    .mv-img{
+      width:100%;height:100%;
+      position:relative;
+    }
+    .mv-img img{
+      width:100%;height:100%;object-fit:cover;
+    }
+    /* Gradient overlay for text readability */
+    .mv-img::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(
+        to bottom,
+        rgba(0,80,70,.15) 0%,
+        rgba(0,80,70,.25) 30%,
+        rgba(0,80,70,.50) 65%,
+        rgba(0,60,50,.70) 100%
+      );
+      z-index:1;
+    }
+    .mv-content{
+      position:absolute;bottom:60px;left:0;right:0;
+      text-align:center;z-index:2;
+    }
+    .mv-catch{
+      display:inline-block;background:rgba(0,150,136,.9);color:#fff;
+      padding:8px 28px;border-radius:30px;font-size:1rem;font-weight:700;margin-bottom:16px;
+      box-shadow:0 2px 12px rgba(0,0,0,.15);
+    }
+    .mv-title{
+      font-size:3rem;font-weight:900;color:#fff;
+      text-shadow:2px 2px 8px rgba(0,0,0,.5), 0 0 30px rgba(0,60,50,.3);
+      line-height:1.5;margin-bottom:8px;
+    }
+    .mv-sub{
+      font-size:1.3rem;font-weight:700;color:#fff;
+      text-shadow:1px 1px 6px rgba(0,0,0,.5), 0 0 20px rgba(0,60,50,.3);
+      margin-bottom:24px;
+    }
+    .mv-points{display:flex;gap:16px;justify-content:center;}
+    .mv-point{
+      background:rgba(255,255,255,.93);padding:14px 24px;border-radius:8px;
+      display:flex;align-items:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);
+    }
+    .mv-point-badge{
+      background:#009688;color:#fff;width:44px;height:44px;border-radius:50%;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      font-family:'Montserrat',sans-serif;line-height:1;flex-shrink:0;
+    }
+    .mv-point-badge .label{font-size:.45rem;font-weight:600;letter-spacing:.05em;}
+    .mv-point-badge .num{font-size:1.15rem;font-weight:700;}
+    .mv-point-text{font-size:.95rem;font-weight:500;color:#2d4a3e;}
+    .mv-point-text .accent{color:#009688;font-weight:700;}
+
+    /* ===== MESSAGE ===== */
+    .message-wrapper{
+      background:#f7fbf9;padding:88px 0 64px;position:relative;
+    }
+    .message-wrapper::after{
+      content:'';position:absolute;bottom:-60px;left:0;right:0;height:80px;
+      background:#f7fbf9;border-radius:0 0 50% 50%/0 0 100% 100%;z-index:1;
+    }
+    .message-deco-left{
+      position:absolute;top:-30px;left:0;width:220px;height:300px;overflow:hidden;z-index:2;
+    }
+    .message-deco-right{
+      position:absolute;bottom:0;right:0;width:160px;height:240px;overflow:hidden;z-index:2;
+    }
+    .leaf-svg{opacity:.7;}
+    .message .hl-en{margin-bottom:16px;}
+    .message h2{font-size:2rem;line-height:1.7;margin-bottom:28px;}
+    .message p{font-size:.95rem;line-height:2.2;margin-bottom:16px;}
+    .message .name{text-align:right;margin-top:20px;font-size:1rem;}
+    .message .name span{font-size:1.6rem;font-weight:700;}
+    .message .name .en{font-size:.75rem;color:#aaa;}
+    .message .btn{margin-top:28px;}
+
+    /* Photo Gallery */
+    .photo_gallery{margin-top:48px;overflow:hidden;}
+    .gallery_track{display:flex;gap:12px;animation:galleryScroll 30s linear infinite;}
+    @keyframes galleryScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+    .gallery_photo{flex-shrink:0;border-radius:16px;overflow:hidden;}
+    .gallery_photo:nth-child(odd){width:260px;height:340px;}
+    .gallery_photo:nth-child(even){width:200px;height:250px;}
+    .gallery_photo img{width:100%;height:100%;object-fit:cover;}
+
+    /* ===== CLINIC ===== */
+    .clinic-wrapper{
+      background:#e8f5f3;padding:120px 0;position:relative;z-index:0;
+    }
+    .clinic-wrapper .headline{font-size:2rem;margin-bottom:32px;}
+    .clinic-wrapper .img img{
+      width:100%;height:320px;object-fit:cover;border-radius:24px;
+    }
+    .top-links{
+      display:grid;grid-template-columns:1fr 1fr;
+      background:#fff;border-radius:16px;margin-top:48px;
+      overflow:hidden;border:1px solid #c8e0d8;
+    }
+    .top-link a{
+      display:flex;align-items:center;gap:16px;
+      padding:24px 20px;border-bottom:2px dotted #b0d0c8;position:relative;
+    }
+    .top-link:nth-child(odd) a{border-right:2px dotted #b0d0c8;}
+    .top-link:nth-child(n+3) a{border-bottom:none;}
+    .link-num{
+      font-family:'Montserrat',sans-serif;color:#009688;
+      font-size:1rem;font-weight:600;flex-shrink:0;
+    }
+    .link-txt{flex:1;}
+    .link-txt .ttl{display:block;font-size:1.25rem;font-weight:500;margin-bottom:2px;}
+    .link-txt .sub{display:block;font-size:.8rem;color:#7a9a90;}
+
+    /* ===== DIRECTOR ===== */
+    .doctor-wrapper{
+      padding:120px 0;position:relative;
+      background:linear-gradient(180deg,#e8f5f3 0%,#f7fbf9 30%);
+    }
+    .doctor-wrapper .txt .sub-headline{font-size:1.05rem;color:#7a9a90;margin-bottom:4px;}
+    .doctor-wrapper .txt .headline{font-size:1.65rem;margin-bottom:16px;}
+    .doctor-wrapper .txt .lead{margin-bottom:28px;}
+    .doctor-links{background:#e8f5f3;border-radius:16px;padding:8px 28px;}
+    .doctor-link{display:flex;align-items:center;gap:16px;padding:20px 0;}
+    .doctor-link+.doctor-link{border-top:2px dotted #b0d0c8;}
+    .doctor-img img{
+      width:100%;height:480px;object-fit:cover;border-radius:20px;
+    }
+    .doctor-caption{margin-top:16px;text-align:center;}
+    .doctor-caption .clinic-name{font-size:.85rem;color:#7a9a90;}
+    .doctor-caption .name-line{font-size:.95rem;margin-top:2px;}
+    .doctor-caption .name-line .role{margin-right:4px;}
+    .doctor-caption .name-line .name{font-size:1.5rem;font-weight:700;}
+    .doctor-caption .name-line .name-en{
+      font-family:'Montserrat',sans-serif;color:#009688;font-size:.8rem;
+      font-weight:500;margin-left:8px;
+    }
+
+    /* ===== JOBS ===== */
+    .jobs-wrapper{padding:100px 0 120px;background:#f7fbf9;}
+    .jobs-head{margin-bottom:40px;}
+    .jobs-head .headline{font-size:2rem;}
+    .job-links{
+      display:grid;grid-template-columns:1fr;gap:24px;
+      max-width:560px;margin:0 auto;
+    }
+    .job-link__inner{
+      display:flex;border:3px solid #009688;border-radius:18px;
+      overflow:hidden;background:#fff;transition:transform .3s,box-shadow .3s;
+      align-items:stretch;position:relative;
+    }
+    .job-link__inner:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,150,136,.12);}
+    .job-link .img{width:200px;flex-shrink:0;overflow:hidden;}
+    .job-link .img img, .recruit-link .img img{
+      width:100%;height:100%;min-height:150px;object-fit:cover;
+    }
+    .job-link .txt{
+      flex:1;padding:24px 20px;display:flex;flex-direction:column;justify-content:center;
+    }
+    .job-en{
+      font-family:'Montserrat',sans-serif;font-size:.72rem;
+      color:#009688;font-weight:600;letter-spacing:.05em;margin-bottom:4px;display:block;
+    }
+    .job-ttl{font-size:1.3rem;font-weight:700;display:block;}
+    .job-sub{font-size:.85rem;color:#7a9a90;margin-top:4px;display:block;}
+    .job-arrow{position:absolute;right:14px;top:50%;transform:translateY(-50%);}
+
+    /* ===== INTERVIEW ===== */
+    .intrview-wrapper{
+      padding:120px 0;position:relative;
+      overflow:hidden;
+    }
+    .intrview-bg{
+      position:absolute;inset:0;display:flex;gap:8px;
+    }
+    .intrview-bg div{
+      flex:1;border-radius:8px;overflow:hidden;
+    }
+    .intrview-bg img{
+      width:100%;height:100%;object-fit:cover;filter:brightness(.7) saturate(.6);
+    }
+    .intrview-content{
+      position:relative;z-index:2;text-align:center;
+      background:rgba(255,255,255,.95);max-width:760px;margin:0 auto;
+      padding:64px 32px;border-radius:20px;
+    }
+    .intrview-content .headline{margin-bottom:12px;}
+    .intrview-content .lead{margin-bottom:8px;}
+    .intrview-content .sub-lead{font-size:.9rem;color:#7a9a90;margin-bottom:28px;}
+
+    /* ===== ENVIRONMENT ===== */
+    .environment-wrapper{padding:120px 0;background:#f7fbf9;}
+    .environment-wrapper .img{display:flex;flex-direction:column;gap:16px;}
+    .environment-wrapper .img img{
+      width:100%;height:220px;object-fit:cover;border-radius:20px;
+    }
+    .environment-wrapper .txt .headline{font-size:1.8rem;}
+    .env-links{background:#e8f5f3;border-radius:16px;padding:8px 28px;margin-top:28px;}
+    .env-link{display:flex;align-items:center;gap:16px;padding:18px 0;}
+    .env-link+.env-link{border-top:2px dotted #b0d0c8;}
+
+    /* ===== FAQ ===== */
+    .faq-wrapper{
+      padding:120px 0 200px;position:relative;overflow:hidden;
+      background:linear-gradient(135deg,#e0f2f1 0%,#f0f8f6 30%,#e8f5e9 60%,#fff8e1 100%);
+    }
+    .faq-bg-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(90deg,rgba(178,223,219,.3) 0%,transparent 25%,transparent 75%,rgba(255,224,130,.3) 100%);
+    }
+    .faq-content{
+      position:relative;z-index:2;text-align:center;
+      background:rgba(255,255,255,.92);max-width:700px;margin:0 auto;
+      padding:56px 40px;border-radius:20px;
+    }
+    .faq-icons{display:flex;justify-content:center;gap:0;margin-bottom:20px;}
+    .faq-icon{
+      width:56px;height:56px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.5rem;font-weight:900;color:#fff;
+      font-family:'Montserrat',sans-serif;
+    }
+    .faq-icon-q{background:#009688;position:relative;z-index:2;}
+    .faq-icon-a{background:#f0981c;margin-left:-8px;margin-top:20px;z-index:1;}
+
+    /* ===== BEFORE APPLYING ===== */
+    .before-applying-wrapper{
+      padding:100px 0;
+      background-color:#e8f5f3;
+      background-image:
+        radial-gradient(#c8e8e0 3px,transparent 3px),
+        radial-gradient(#c8e8e0 3px,transparent 3px);
+      background-size:24px 24px;
+      background-position:0 0,12px 12px;
+    }
+    .before-cards{
+      display:grid;grid-template-columns:1fr 1fr;gap:40px;
+      max-width:880px;margin:32px auto 0;
+    }
+    .before-card{text-align:center;}
+    .before-card-img{border-radius:20px;overflow:hidden;height:260px;position:relative;}
+    .before-card-img img{width:100%;height:100%;object-fit:cover;}
+    .before-card-label{
+      display:inline-flex;align-items:center;gap:10px;
+      background:#fff;padding:14px 28px;border-radius:10px;
+      font-size:1.1rem;font-weight:700;position:relative;margin-top:-28px;z-index:1;
+      box-shadow:0 4px 16px rgba(0,0,0,.08);
+    }
+    .before-card-desc{font-size:.85rem;color:#7a9a90;margin-top:16px;line-height:1.9;}
+
+    /* ===== RECRUIT ===== */
+    .footer-recruit-wrapper{padding:100px 0;background:#e8f5f3;}
+    .recruit-links{
+      display:grid;grid-template-columns:1fr;gap:24px;
+      max-width:560px;margin:40px auto 0;
+    }
+    .recruit-link__inner{
+      display:flex;border:3px solid #009688;border-radius:18px;
+      overflow:hidden;background:#fff;transition:transform .3s;
+      align-items:stretch;position:relative;
+    }
+    .recruit-link__inner:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,150,136,.12);}
+    .recruit-link .img{width:200px;flex-shrink:0;overflow:hidden;}
+    .recruit-link .txt{
+      flex:1;padding:24px 20px;display:flex;flex-direction:column;justify-content:center;
+    }
+    .recruit-en{
+      font-family:'Montserrat',sans-serif;font-size:.72rem;
+      color:#009688;font-weight:600;letter-spacing:.05em;margin-bottom:4px;display:block;
+    }
+    .recruit-ttl{font-size:1.3rem;font-weight:700;display:block;}
+    .recruit-sub{font-size:.85rem;color:#7a9a90;margin-top:4px;display:block;}
+    .recruit-arrow{position:absolute;right:14px;top:50%;transform:translateY(-50%);}
+
+    /* ===== FOOTER SITEMAP ===== */
+    .footer-sitemap{padding:48px 0;border-top:1px solid #c8e0d8;background:#f7fbf9;}
+    .sitemap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+    .sitemap-main-link{font-weight:700;font-size:.9rem;display:block;margin-bottom:10px;}
+    .sitemap-sub-list li{margin-bottom:4px;}
+    .sitemap-sub-list li a{font-size:.8rem;color:#7a9a90;display:flex;align-items:center;gap:4px;}
+    .sitemap-sub-list li a::before{content:'-';color:#ccc;}
+
+    /* ===== FOOTER INFO ===== */
+    .site-footer{padding:48px 0 0;background:#f7fbf9;border-top:1px solid #c8e0d8;}
+    .footer-inner{
+      display:grid;grid-template-columns:1fr 1.2fr;gap:48px;
+      max-width:1100px;margin:0 auto;padding:0 24px;
+    }
+    .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+    .footer-logo img{height:54px;width:auto;}
+    .footer-btns{display:flex;flex-direction:column;gap:10px;margin-top:20px;}
+    .footer-btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:12px;
+      border:2px solid #009688;color:#009688;background:#fff;
+      padding:12px 24px;border-radius:999px;font-weight:600;font-size:.9rem;max-width:260px;
+    }
+    .footer-btn:hover{background:#009688;color:#fff;}
+    .footer-address{font-size:.85rem;color:#7a9a90;}
+    .footer-tel{
+      font-family:'Montserrat',sans-serif;
+      font-size:1.8rem;font-weight:700;color:#009688;margin:8px 0 16px;
+    }
+    .footer-tel span{font-family:'Zen Maru Gothic',serif;font-size:1rem;}
+
+    /* Schedule */
+    .schedule-table{width:100%;border-collapse:collapse;font-size:.85rem;border-radius:12px;overflow:hidden;}
+    .schedule-table thead th{
+      background:#009688;color:#fff;padding:10px 6px;font-weight:600;text-align:center;
+    }
+    .schedule-table thead th:first-child{text-align:left;padding-left:14px;}
+    .schedule-table tbody td{
+      padding:12px 6px;text-align:center;border-bottom:1px solid #d0e8e0;background:#fff;
+    }
+    .schedule-table tbody td:first-child{text-align:left;padding-left:14px;font-weight:500;}
+    .schedule-dot{display:inline-block;width:12px;height:12px;background:#2d4a3e;border-radius:50%;}
+    .schedule-off{font-size:.8rem;color:#ccc;}
+
+    .copyright{
+      text-align:center;padding:18px;margin-top:40px;
+      background:#009688;color:#fff;font-size:.72rem;
+    }
+
+    /* ===== FIXED SIDE BUTTONS ===== */
+    .fixed-btn{
+      position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:999;
+      display:flex;flex-direction:column;gap:0;
+    }
+    .fixed-btn a{
+      writing-mode:vertical-rl;padding:20px 10px;
+      font-size:.85rem;font-weight:700;color:#fff;
+      display:flex;align-items:center;gap:8px;
+    }
+    .fixed-btn a:first-child{background:#009688;border-radius:8px 0 0 0;}
+    .fixed-btn a:nth-child(2){background:#f0981c;border-radius:0 0 0 8px;}
+    .fixed-btn .instagram{
+      writing-mode:horizontal-tb;padding:10px;
+      background:#fff;border:2px solid #009688;border-radius:0;
+      display:flex;align-items:center;justify-content:center;
+    }
+
+    /* ===== TO TOP ===== */
+    .to-top{
+      position:fixed;bottom:24px;right:56px;z-index:998;
+      text-align:center;font-size:.7rem;color:#009688;font-weight:600;
+    }
+    .to-top-arrow{
+      display:block;width:0;height:0;
+      border-left:10px solid transparent;border-right:10px solid transparent;
+      border-bottom:12px solid #009688;margin:0 auto 3px;
+    }
+
+    /* ===== RABBIT FOOTPRINTS — 導線デザイン ===== */
+    /* 共通: セクションに relative が必要 */
+    .paw-trail{
+      position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0;
+    }
+    .paw-trail .paw-step{
+      position:absolute;
+      opacity:0;
+    }
+
+    /* --- フェーズ1: 興味 (MESSAGE / CLINIC) — 小さく淡い --- */
+    .paw-phase1 .paw-step svg{width:22px;height:30px;}
+    .paw-phase1 .paw-step{animation:pawWalk 5s ease-in-out infinite;}
+
+    /* --- フェーズ2: 共感 (DIRECTOR / JOBS) — やや大きく --- */
+    .paw-phase2 .paw-step svg{width:26px;height:35px;}
+    .paw-phase2 .paw-step{animation:pawWalk 4.5s ease-in-out infinite;}
+
+    /* --- フェーズ3: 安心 (ENVIRONMENT / FAQ) — はっきり --- */
+    .paw-phase3 .paw-step svg{width:30px;height:40px;}
+    .paw-phase3 .paw-step{animation:pawWalk 4s ease-in-out infinite;}
+
+    /* --- フェーズ4: 行動 (BEFORE APPLYING) — 大きく集約 --- */
+    .paw-phase4 .paw-step svg{width:34px;height:46px;}
+    .paw-phase4 .paw-step{animation:pawWalk 3.5s ease-in-out infinite;}
+
+    /* --- フェーズ5: ゴール到達 (RECRUIT) — 最大・華やか --- */
+    .paw-phase5 .paw-step svg{width:38px;height:50px;}
+    .paw-phase5 .paw-step{animation:pawGoal 3s ease-in-out infinite;}
+
+    /* 歩行アニメーション (順番に足跡が現れて消える) */
+    @keyframes pawWalk{
+      0%{opacity:0;transform:scale(.4);}
+      8%{opacity:var(--paw-opacity,.18);transform:scale(1);}
+      35%{opacity:var(--paw-opacity,.18);transform:scale(1);}
+      60%{opacity:0;transform:scale(.85);}
+      100%{opacity:0;}
+    }
+    /* ゴール到達アニメーション (より強調) */
+    @keyframes pawGoal{
+      0%{opacity:0;transform:scale(.3);}
+      10%{opacity:.35;transform:scale(1.1);}
+      30%{opacity:.35;transform:scale(1);}
+      60%{opacity:.12;transform:scale(.95);}
+      100%{opacity:0;}
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:900px){
+      .gnav-list{display:none;}
+      .repeat-grow1-1{grid-template-columns:1fr;gap:32px;}
+      .top-links,.before-cards{grid-template-columns:1fr;}
+      .top-link:nth-child(odd) a{border-right:none;}
+      .sitemap-grid{grid-template-columns:1fr 1fr;}
+      .mv-title{font-size:2rem;}
+      .mv-points{flex-direction:column;align-items:center;gap:10px;}
+      .footer-inner{grid-template-columns:1fr;}
+      .headline{font-size:1.6rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="hd-wrapper">
+      <div class="hd-left">
+        <a href="#" class="site-logo">
+          <img src="D02_colorのコピー.JPG" alt="中央歯科医院">
+        </a>
+        <div class="recruit-badge">求人採用サイト</div>
+      </div>
+      <nav>
+        <ul class="gnav-list">
+          <li><a href="#">当院のこと</a></li>
+          <li><a href="#">院長紹介</a></li>
+          <li><a href="#">スタッフインタビュー</a></li>
+          <li><a href="#">はたらく環境</a></li>
+          <li><a href="#">応募の前に</a></li>
+          <li><a href="#">募集要項</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== MAIN VISUAL ===== -->
+    <section class="main-visual">
+      <div class="mv-img">
+        <img src="写真/集合写真/全員/DSC_0047_補正.jpg" alt="中央歯科医院スタッフ集合写真">
+      </div>
+      <div class="mv-content">
+        <div class="mv-catch">&#10047; ホワイトエッセンス加盟院</div>
+        <h2 class="mv-title">きれいなお口を守り、<br>笑顔を増やす。</h2>
+        <p class="mv-sub">道内で珍しい「ホワイトエッセンス」加盟院。</p>
+        <div class="mv-points">
+          <div class="mv-point">
+            <div class="mv-point-badge"><span class="label">POINT</span><span class="num">01</span></div>
+            <div class="mv-point-text"><span class="accent">予防歯科</span>に注力</div>
+          </div>
+          <div class="mv-point">
+            <div class="mv-point-badge"><span class="label">POINT</span><span class="num">02</span></div>
+            <div class="mv-point-text"><span class="accent">ホワイトエッセンス</span>を学べる</div>
+          </div>
+          <div class="mv-point">
+            <div class="mv-point-badge"><span class="label">POINT</span><span class="num">03</span></div>
+            <div class="mv-point-text"><span class="accent">新卒・中途</span>大歓迎</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MESSAGE ===== -->
+    <section class="message-wrapper">
+      <!-- Phase1: 興味 — 右側を下向きに歩き始める（ここから旅が始まる） -->
+      <div class="paw-trail paw-phase1" style="--paw-opacity:.15;">
+        <div class="paw-step" style="right:8%;top:12%;transform:rotate(190deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#b2dfdb"/></svg></div>
+        <div class="paw-step" style="right:6%;top:24%;transform:rotate(185deg);animation-delay:.8s;"><svg><use href="#rabbit-paw" fill="#b2dfdb"/></svg></div>
+        <div class="paw-step" style="right:9%;top:36%;transform:rotate(195deg);animation-delay:1.6s;"><svg><use href="#rabbit-paw" fill="#b2dfdb"/></svg></div>
+        <div class="paw-step" style="right:7%;top:48%;transform:rotate(188deg);animation-delay:2.4s;"><svg><use href="#rabbit-paw" fill="#b2dfdb"/></svg></div>
+      </div>
+      <div class="message-deco-left">
+        <svg viewBox="0 0 220 300" class="leaf-svg" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#80cbc4" opacity=".5">
+            <ellipse cx="40" cy="60" rx="35" ry="18" transform="rotate(-40 40 60)"/>
+            <ellipse cx="80" cy="30" rx="30" ry="14" transform="rotate(-20 80 30)"/>
+            <ellipse cx="60" cy="100" rx="28" ry="13" transform="rotate(-50 60 100)"/>
+            <ellipse cx="30" cy="140" rx="32" ry="15" transform="rotate(-30 30 140)"/>
+            <ellipse cx="100" cy="80" rx="25" ry="12" transform="rotate(-10 100 80)"/>
+            <ellipse cx="50" cy="180" rx="30" ry="14" transform="rotate(-45 50 180)"/>
+            <ellipse cx="20" cy="220" rx="28" ry="13" transform="rotate(-35 20 220)"/>
+          </g>
+        </svg>
+      </div>
+      <div class="message-deco-right">
+        <svg viewBox="0 0 160 240" class="leaf-svg" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#80cbc4" opacity=".45">
+            <ellipse cx="120" cy="180" rx="30" ry="14" transform="rotate(40 120 180)"/>
+            <ellipse cx="100" cy="220" rx="28" ry="13" transform="rotate(20 100 220)"/>
+            <ellipse cx="140" cy="150" rx="25" ry="12" transform="rotate(50 140 150)"/>
+            <ellipse cx="80" cy="200" rx="32" ry="15" transform="rotate(30 80 200)"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="main-wrapper">
+        <div class="message tcenter">
+          <p><span class="hl-en hl-en-teal">MESSAGE</span></p>
+          <h2>歯が白くなると、笑顔が増えて、<br>口元のケアもより熱心に。<br>"変わる喜び"を一緒に育てていく仕事です。</h2>
+          <p>
+            医療ホワイトニングの1つである「ホワイトエッセンス」を、<br>
+            江別市でいち早く導入した医院です。<br>
+            当院は予防目的で来院される患者様が多く、専用ユニットはフル稼働しています。
+          </p>
+          <p>
+            質の高いクリーニングによって白い歯を手に入れた患者様は、<br>
+            その輝きを保ちたいという気持ちから、口元ケアへの意識が高まる。<br>
+            それが、虫歯や歯周病への予防につながっています。
+          </p>
+          <p>
+            「きれいな口元を保つ」という患者様と共通の目標を持てるのは、当院の魅力の一つです。
+          </p>
+          <p>
+            ホワイトエッセンスを学べる当院で、<br>
+            患者様の笑顔を増やせる歯科衛生士を目指してみませんか？
+          </p>
+          <p class="name">
+            院長　<span>小川 敦史</span><br>
+            <span class="en"><small>Ogawa Atsushi</small></span>
+          </p>
+          <div class="btn teal-btn">
+            <a href="#">募集要項を見る</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo Gallery -->
+      <div class="photo_gallery">
+        <ul class="gallery_track">
+          <li class="gallery_photo"><img src="写真/診療風景/歯科衛生士/DSC_0112_補正.jpg" alt="診療風景"></li>
+          <li class="gallery_photo"><img src="写真/外観・内観/外観/DSC_0434_補正.jpg" alt="外観"></li>
+          <li class="gallery_photo"><img src="写真/診療風景/歯科医師/DSC_0200_補正.jpg" alt="診療風景"></li>
+          <li class="gallery_photo"><img src="写真/外観・内観/受付・待合室/DSC_0004_補正.jpg" alt="待合室"></li>
+          <li class="gallery_photo"><img src="写真/お昼休憩/DSC_0402_補正.jpg" alt="お昼休憩"></li>
+          <li class="gallery_photo"><img src="写真/診療風景/複数人/DSC_0533_補正.jpg" alt="スタッフ"></li>
+          <li class="gallery_photo"><img src="写真/外観・内観/ホワイトエッセンス/DSC_0270_補正.jpg" alt="ホワイトエッセンス"></li>
+          <li class="gallery_photo"><img src="写真/診療風景/歯科衛生士/DSC_0287_補正.jpg" alt="歯科衛生士"></li>
+          <li class="gallery_photo"><img src="写真/外観・内観/内観/DSC_0109_補正.jpg" alt="院内"></li>
+          <li class="gallery_photo"><img src="写真/診療風景/受付/DSC_0252_補正.jpg" alt="受付"></li>
+          <!-- duplicate for seamless loop -->
+          <li class="gallery_photo"><img src="写真/診療風景/歯科衛生士/DSC_0112_補正.jpg" alt="診療風景"></li>
+          <li class="gallery_photo"><img src="写真/外観・内観/外観/DSC_0434_補正.jpg" alt="外観"></li>
+          <li class="gallery_photo"><img src="写真/診療風景/歯科医師/DSC_0200_補正.jpg" alt="診療風景"></li>
+          <li class="gallery_photo"><img src="写真/外観・内観/受付・待合室/DSC_0004_補正.jpg" alt="待合室"></li>
+          <li class="gallery_photo"><img src="写真/お昼休憩/DSC_0402_補正.jpg" alt="お昼休憩"></li>
+          <li class="gallery_photo"><img src="写真/診療風景/複数人/DSC_0533_補正.jpg" alt="スタッフ"></li>
+          <li class="gallery_photo"><img src="写真/外観・内観/ホワイトエッセンス/DSC_0270_補正.jpg" alt="ホワイトエッセンス"></li>
+          <li class="gallery_photo"><img src="写真/診療風景/歯科衛生士/DSC_0287_補正.jpg" alt="歯科衛生士"></li>
+          <li class="gallery_photo"><img src="写真/外観・内観/内観/DSC_0109_補正.jpg" alt="院内"></li>
+          <li class="gallery_photo"><img src="写真/診療風景/受付/DSC_0252_補正.jpg" alt="受付"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CLINIC ===== -->
+    <section class="clinic-wrapper">
+      <div class="main-wrapper">
+        <div class="repeat-grow1-1">
+          <div class="img">
+            <img src="写真/外観・内観/外観/DSC_0437_補正.jpg" alt="中央歯科医院 外観" class="radius-medium">
+          </div>
+          <div class="txt">
+            <p><span class="hl-en hl-en-teal">CLINIC</span></p>
+            <h2 class="headline">「歯のメンテナンス＝身だしなみの一部」<br>当院は、予防歯科に注力しています。</h2>
+          </div>
+        </div>
+        <ul class="top-links">
+          <li class="top-link"><a href="#">
+            <span class="link-num">01.</span>
+            <div class="link-txt"><span class="ttl">当院について</span><span class="sub">医院理念・診療方針をお伝えします</span></div>
+            <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a></li>
+          <li class="top-link"><a href="#">
+            <span class="link-num">02.</span>
+            <div class="link-txt"><span class="ttl">大事にしていること</span><span class="sub">中央歯科医院のキーワードは？</span></div>
+            <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a></li>
+          <li class="top-link"><a href="#">
+            <span class="link-num">03.</span>
+            <div class="link-txt"><span class="ttl">数字で見える医院のこと</span><span class="sub">あれこれリアルに浮き彫りにします</span></div>
+            <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a></li>
+          <li class="top-link"><a href="#">
+            <span class="link-num">04.</span>
+            <div class="link-txt"><span class="ttl">医院概要・アクセス</span><span class="sub">医院の基本情報はこちら</span></div>
+            <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== DIRECTOR ===== -->
+    <section class="doctor-wrapper" style="position:relative;">
+      <!-- Phase2: 共感 — 右上から左下へ斜めに渡る（院長を見て共感） -->
+      <div class="paw-trail paw-phase2" style="--paw-opacity:.20;">
+        <div class="paw-step" style="right:6%;top:8%;transform:rotate(210deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#80cbc4"/></svg></div>
+        <div class="paw-step" style="right:14%;top:22%;transform:rotate(205deg);animation-delay:.7s;"><svg><use href="#rabbit-paw" fill="#80cbc4"/></svg></div>
+        <div class="paw-step" style="left:42%;top:40%;transform:rotate(215deg);animation-delay:1.4s;"><svg><use href="#rabbit-paw" fill="#80cbc4"/></svg></div>
+        <div class="paw-step" style="left:12%;top:58%;transform:rotate(200deg);animation-delay:2.1s;"><svg><use href="#rabbit-paw" fill="#80cbc4"/></svg></div>
+      </div>
+      <div class="main-wrapper">
+        <p><span class="hl-en hl-en-teal">DIRECTOR / 院長紹介</span></p>
+        <div class="repeat-grow1-1">
+          <div class="txt">
+            <h2 class="headline">目指しているのは<br>「通うのが楽しみになる歯科医院」。</h2>
+            <div class="doctor-links">
+              <a href="#" class="doctor-link">
+                <span class="link-num">01.</span>
+                <div class="link-txt"><span class="ttl">院長プロフィール</span><span class="sub">小川院長のプロフィールをまとめました</span></div>
+                <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </a>
+              <a href="#" class="doctor-link">
+                <span class="link-num">02.</span>
+                <div class="link-txt"><span class="ttl">院長に聞く99の質問</span><span class="sub">プライベートから好きなものまで、院長の全てが分かる</span></div>
+                <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </a>
+            </div>
+          </div>
+          <div class="img">
+            <div class="doctor-img">
+              <img src="写真/院長写真/DSC_0419_補正.jpg" alt="院長 小川敦史">
+            </div>
+            <div class="doctor-caption">
+              <p class="clinic-name">中央歯科医院</p>
+              <p class="name-line">
+                <span class="role">院長</span>
+                <span class="name">小川 敦史</span>
+                <span class="name-en">Ogawa Atsushi</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== JOBS ===== -->
+    <section class="jobs-wrapper" style="position:relative;">
+      <!-- Phase2: 理解 — 左から右下へ斜めに（仕事内容を見ながら下へ進む） -->
+      <div class="paw-trail paw-phase2" style="--paw-opacity:.22;">
+        <div class="paw-step" style="left:5%;top:10%;transform:rotate(160deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#80cbc4"/></svg></div>
+        <div class="paw-step" style="left:10%;top:28%;transform:rotate(165deg);animation-delay:.7s;"><svg><use href="#rabbit-paw" fill="#80cbc4"/></svg></div>
+        <div class="paw-step" style="left:7%;top:48%;transform:rotate(155deg);animation-delay:1.4s;"><svg><use href="#rabbit-paw" fill="#80cbc4"/></svg></div>
+        <div class="paw-step" style="left:11%;top:68%;transform:rotate(168deg);animation-delay:2.1s;"><svg><use href="#rabbit-paw" fill="#80cbc4"/></svg></div>
+      </div>
+      <div class="main-wrapper">
+        <div class="jobs-head tcenter">
+          <p><span class="hl-en hl-en-teal">JOBS</span></p>
+          <h2 class="headline">仕事を知る</h2>
+          <p class="lead">ホワイトエッセンスを1から学べるチャンス。<br>歯科衛生士の業務内容についてご紹介します。</p>
+        </div>
+        <ul class="job-links">
+          <li class="job-link"><a href="#" class="job-link__inner">
+            <div class="img"><img src="写真/診療風景/歯科衛生士/DSC_0173_補正.jpg" alt="歯科衛生士"></div>
+            <div class="txt">
+              <span class="job-en">DENTAL HYGIENIST</span>
+              <span class="job-ttl">歯科衛生士</span>
+              <span class="job-sub">正社員／パート</span>
+            </div>
+            <span class="job-arrow arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== INTERVIEW ===== -->
+    <section class="intrview-wrapper">
+      <div class="intrview-bg">
+        <div><img src="写真/診療風景/歯科衛生士/DSC_0248_補正.jpg" alt=""></div>
+        <div><img src="写真/診療風景/複数人/DSC_0521_補正.jpg" alt=""></div>
+        <div><img src="写真/集合写真/歯科衛生士/DSC_0070_補正.jpg" alt=""></div>
+        <div><img src="写真/診療風景/歯科医師/DSC_0309_補正.jpg" alt=""></div>
+        <div><img src="写真/お昼休憩/DSC_0407_補正.jpg" alt=""></div>
+      </div>
+      <div class="main-wrapper">
+        <div class="intrview-content">
+          <p><span class="hl-en hl-en-teal">INTERVIEW</span></p>
+          <h2 class="headline">スタッフインタビュー</h2>
+          <p class="lead">入職の決め手、仕事観、これからのことなど、</p>
+          <p class="sub-lead">8名のスタッフがお話しします。</p>
+          <div class="btn teal-btn"><a href="#">スタッフインタビューを見る</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ENVIRONMENT ===== -->
+    <section class="environment-wrapper" style="position:relative;">
+      <!-- Phase3: 安心 — 右側を下へ（環境を確認して安心する） -->
+      <div class="paw-trail paw-phase3" style="--paw-opacity:.25;">
+        <div class="paw-step" style="right:5%;top:8%;transform:rotate(185deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
+        <div class="paw-step" style="right:7%;top:25%;transform:rotate(190deg);animation-delay:.65s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
+        <div class="paw-step" style="right:4%;top:44%;transform:rotate(182deg);animation-delay:1.3s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
+        <div class="paw-step" style="right:8%;top:62%;transform:rotate(192deg);animation-delay:1.95s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
+        <div class="paw-step" style="right:5%;top:80%;transform:rotate(186deg);animation-delay:2.6s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
+      </div>
+      <div class="main-wrapper">
+        <div class="repeat-grow1-1">
+          <div class="img">
+            <img src="写真/お昼休憩/DSC_0405_補正.jpg" alt="スタッフの様子" class="radius-small">
+            <img src="写真/外観・内観/内観/DSC_0397_補正.jpg" alt="院内の様子" class="radius-small">
+          </div>
+          <div class="txt">
+            <p><span class="hl-en hl-en-teal">ENVIRONMENT</span></p>
+            <h2 class="headline">はたらく環境</h2>
+            <p class="lead">
+              長く働くために知っておきたいのが業務以外のこと。<br>
+              具体的な環境についてご紹介します。
+            </p>
+            <div class="env-links">
+              <a href="#" class="env-link">
+                <span class="link-num">01.</span>
+                <div class="link-txt"><span class="ttl">働きやすい理由</span><span class="sub">スタッフの「推しポイント」は？</span></div>
+                <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </a>
+              <a href="#" class="env-link">
+                <span class="link-num">02.</span>
+                <div class="link-txt"><span class="ttl">福利厚生</span><span class="sub">仕事以外にもうれしいメリットが</span></div>
+                <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </a>
+              <a href="#" class="env-link">
+                <span class="link-num">03.</span>
+                <div class="link-txt"><span class="ttl">教育体制</span><span class="sub">未経験のあなたも先輩たちがバックアップ</span></div>
+                <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </a>
+              <a href="#" class="env-link">
+                <span class="link-num">04.</span>
+                <div class="link-txt"><span class="ttl">院内設備ギャラリー</span><span class="sub">画像で働く環境をイメージできる</span></div>
+                <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-wrapper">
+      <div class="faq-bg-overlay"></div>
+      <!-- Phase3: 確信 — 右から中央下へ（不安を解消し確信へ） -->
+      <div class="paw-trail paw-phase3" style="--paw-opacity:.28;">
+        <div class="paw-step" style="right:8%;top:8%;transform:rotate(210deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
+        <div class="paw-step" style="right:15%;top:22%;transform:rotate(205deg);animation-delay:.65s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
+        <div class="paw-step" style="right:22%;top:38%;transform:rotate(215deg);animation-delay:1.3s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
+        <div class="paw-step" style="left:38%;top:55%;transform:rotate(195deg);animation-delay:1.95s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
+        <div class="paw-step" style="left:32%;top:72%;transform:rotate(188deg);animation-delay:2.6s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
+      </div>
+      <div class="main-wrapper">
+        <div class="faq-content">
+          <div class="faq-icons">
+            <div class="faq-icon faq-icon-q">Q</div>
+            <div class="faq-icon faq-icon-a">A</div>
+          </div>
+          <p><span class="hl-en hl-en-teal">FAQ</span></p>
+          <h2 class="headline">よくある質問</h2>
+          <p class="lead" style="margin-bottom:28px;">
+            聞きにくいことや、ささいなことも、<br>
+            ここで解決します！
+          </p>
+          <div class="btn teal-btn"><a href="#">よくある質問を見る</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BEFORE APPLYING ===== -->
+    <section class="before-applying-wrapper" style="position:relative;">
+      <!-- Phase4: 行動 — 左右から中央下部へ収束（応募への決意が固まる） -->
+      <!-- 左の道 -->
+      <div class="paw-trail paw-phase4" style="--paw-opacity:.30;">
+        <div class="paw-step" style="left:4%;top:10%;transform:rotate(155deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
+        <div class="paw-step" style="left:12%;top:30%;transform:rotate(145deg);animation-delay:.6s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
+        <div class="paw-step" style="left:22%;top:50%;transform:rotate(150deg);animation-delay:1.2s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
+        <div class="paw-step" style="left:34%;top:72%;transform:rotate(160deg);animation-delay:1.8s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
+      </div>
+      <!-- 右の道 -->
+      <div class="paw-trail paw-phase4" style="--paw-opacity:.30;">
+        <div class="paw-step" style="right:4%;top:10%;transform:rotate(205deg);animation-delay:.3s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
+        <div class="paw-step" style="right:12%;top:30%;transform:rotate(215deg);animation-delay:.9s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
+        <div class="paw-step" style="right:22%;top:50%;transform:rotate(210deg);animation-delay:1.5s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
+        <div class="paw-step" style="right:34%;top:72%;transform:rotate(200deg);animation-delay:2.1s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
+      </div>
+      <div class="main-wrapper tcenter">
+        <p><span class="hl-en hl-en-teal">BEFORE APPLYING</span></p>
+        <h2 class="headline">応募の前に</h2>
+        <div class="before-cards">
+          <a href="#" class="before-card">
+            <div class="before-card-img"><img src="写真/集合写真/全員/DSC_0058_補正.jpg" alt="マッチング率診断"></div>
+            <div class="before-card-label">マッチング率診断 <span class="arrow-circle" style="width:28px;height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+            <p class="before-card-desc">10個の質問に答えるだけで、当院との相性がわかります。</p>
+          </a>
+          <a href="#" class="before-card">
+            <div class="before-card-img"><img src="写真/外観・内観/外観/DSC_0445_補正.jpg" alt="医院見学のご案内"></div>
+            <div class="before-card-label">医院見学のご案内 <span class="arrow-circle" style="width:28px;height:28px;"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+            <p class="before-card-desc">見学や採用までのスケジュールはこちら。</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== RECRUIT ===== -->
+  <footer id="colophon">
+    <div class="footer-recruit-wrapper" style="position:relative;overflow:hidden;">
+      <!-- Phase5: ゴール到達 — 足跡が中央に集まって到着！ -->
+      <div class="paw-trail paw-phase5" style="--paw-opacity:.35;">
+        <!-- 左上から中央へ -->
+        <div class="paw-step" style="left:8%;top:8%;transform:rotate(148deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#009688"/></svg></div>
+        <div class="paw-step" style="left:18%;top:22%;transform:rotate(152deg);animation-delay:.5s;"><svg><use href="#rabbit-paw" fill="#009688"/></svg></div>
+        <div class="paw-step" style="left:30%;top:38%;transform:rotate(145deg);animation-delay:1.0s;"><svg><use href="#rabbit-paw" fill="#009688"/></svg></div>
+        <!-- 右上から中央へ -->
+        <div class="paw-step" style="right:8%;top:8%;transform:rotate(212deg);animation-delay:.25s;"><svg><use href="#rabbit-paw" fill="#009688"/></svg></div>
+        <div class="paw-step" style="right:18%;top:22%;transform:rotate(208deg);animation-delay:.75s;"><svg><use href="#rabbit-paw" fill="#009688"/></svg></div>
+        <div class="paw-step" style="right:30%;top:38%;transform:rotate(215deg);animation-delay:1.25s;"><svg><use href="#rabbit-paw" fill="#009688"/></svg></div>
+      </div>
+      <div class="main-wrapper tcenter">
+        <p><span class="hl-en hl-en-teal">RECRUIT</span></p>
+        <h2 class="headline">募集要項・エントリー</h2>
+        <p class="lead">ホワイトエッセンスを1から学べるチャンス。<br>新卒／中途、どちらの方も大歓迎です。</p>
+        <ul class="recruit-links">
+          <li class="recruit-link"><a href="#" class="recruit-link__inner">
+            <div class="img"><img src="写真/診療風景/歯科衛生士/DSC_0267_補正.jpg" alt="歯科衛生士"></div>
+            <div class="txt">
+              <span class="recruit-en">DENTAL HYGIENIST</span>
+              <span class="recruit-ttl">歯科衛生士</span>
+              <span class="recruit-sub">正社員／パート</span>
+            </div>
+            <span class="recruit-arrow arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sitemap -->
+    <div class="footer-sitemap">
+      <div class="main-wrapper">
+        <div class="sitemap-grid">
+          <div>
+            <a href="#" class="sitemap-main-link">トップページ</a>
+            <a href="#" class="sitemap-main-link" style="margin-top:16px;">当院のこと</a>
+            <ul class="sitemap-sub-list">
+              <li><a href="#">当院について</a></li>
+              <li><a href="#">大事にしていること</a></li>
+              <li><a href="#">数字で見える医院のこと</a></li>
+              <li><a href="#">医院概要・アクセス</a></li>
+            </ul>
+          </div>
+          <div>
+            <a href="#" class="sitemap-main-link">院長紹介</a>
+            <ul class="sitemap-sub-list">
+              <li><a href="#">院長プロフィール</a></li>
+              <li><a href="#">院長に聞く99の質問</a></li>
+            </ul>
+            <a href="#" class="sitemap-main-link" style="margin-top:16px;">仕事を知る</a>
+            <ul class="sitemap-sub-list">
+              <li><a href="#">歯科衛生士</a></li>
+            </ul>
+          </div>
+          <div>
+            <a href="#" class="sitemap-main-link">スタッフインタビュー</a>
+            <a href="#" class="sitemap-main-link" style="margin-top:16px;">はたらく環境</a>
+            <ul class="sitemap-sub-list">
+              <li><a href="#">働きやすい理由</a></li>
+              <li><a href="#">福利厚生</a></li>
+              <li><a href="#">教育体制</a></li>
+              <li><a href="#">院内設備ギャラリー</a></li>
+              <li><a href="#">よくある質問</a></li>
+            </ul>
+          </div>
+          <div>
+            <a href="#" class="sitemap-main-link">応募の前に</a>
+            <ul class="sitemap-sub-list">
+              <li><a href="#">マッチング率診断</a></li>
+              <li><a href="#">医院見学のご案内</a></li>
+            </ul>
+            <a href="#" class="sitemap-main-link" style="margin-top:24px;">応募・各種申し込み</a>
+            <a href="#" class="sitemap-main-link" style="margin-top:16px;">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Info -->
+    <div class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <img src="D02_colorのコピー.JPG" alt="中央歯科医院" style="height:54px;">
+          </div>
+          <div class="recruit-badge">求人採用サイト</div>
+          <div class="footer-btns">
+            <a href="#" class="footer-btn">クリニックサイト <span class="arrow-circle" style="width:24px;height:24px;"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+            <a href="#" class="footer-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="6" stroke="#009688" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="#009688" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="#009688"/></svg>
+              採用Instagram <span class="arrow-circle" style="width:24px;height:24px;"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <p class="footer-address">〒069-0801<br>北海道江別市中央町1-17</p>
+          <p class="footer-tel"><span>TEL：</span>011-382-5859</p>
+          <table class="schedule-table">
+            <thead>
+              <tr><th>診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日・祝</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>9:00〜12:00</td>
+                <td><span class="schedule-dot"></span></td>
+                <td><span class="schedule-dot"></span></td>
+                <td><span class="schedule-off">休</span></td>
+                <td><span class="schedule-dot"></span></td>
+                <td><span class="schedule-dot"></span></td>
+                <td><span class="schedule-dot"></span></td>
+                <td><span class="schedule-off">休</span></td>
+              </tr>
+              <tr>
+                <td>13:30〜18:00</td>
+                <td><span class="schedule-dot"></span></td>
+                <td><span class="schedule-dot"></span></td>
+                <td><span class="schedule-off">休</span></td>
+                <td><span class="schedule-dot"></span></td>
+                <td><span class="schedule-dot"></span></td>
+                <td><span class="schedule-dot"></span></td>
+                <td><span class="schedule-off">休</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="copyright">Copyright &copy; 中央歯科医院 求人採用サイト All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ===== FIXED SIDE BUTTONS ===== -->
+  <div class="fixed-btn">
+    <a href="#">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8" fill="none" stroke="white" stroke-width="2"/></svg>
+      <span>募集要項</span>
+    </a>
+    <a href="#">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>応募・申し込み</span>
+    </a>
+    <a href="#" class="instagram">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="6" stroke="#009688" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="#009688" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="#009688"/></svg>
+    </a>
+  </div>
+
+  <!-- ===== TO TOP ===== -->
+  <a href="#" class="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+    <span class="to-top-arrow"></span>TOPへ
+  </a>
+
+  <!-- ===== SVG DEFS (rabbit footprint) ===== -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <defs>
+      <symbol id="rabbit-paw" viewBox="0 0 36 48">
+        <!-- Back paws (top, 2 elongated ovals) -->
+        <ellipse cx="10" cy="12" rx="5" ry="10" fill="currentColor" transform="rotate(-8 10 12)"/>
+        <ellipse cx="26" cy="12" rx="5" ry="10" fill="currentColor" transform="rotate(8 26 12)"/>
+        <!-- Front paws (bottom, 2 small circles) -->
+        <ellipse cx="13" cy="35" rx="4" ry="6" fill="currentColor"/>
+        <ellipse cx="23" cy="35" rx="4" ry="6" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+</body>
+</html>
