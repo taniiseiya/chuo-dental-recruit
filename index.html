@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>中央歯科医院 求人採用サイト</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ===== RESET ===== */
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
     html{scroll-behavior:smooth;}
     body{
-      font-family:'Zen Maru Gothic',serif;
+      font-family:'M PLUS Rounded 1c',sans-serif;
       color:#2d4a3e;
       line-height:1.9;
       overflow-x:hidden;
@@ -50,14 +50,14 @@
       font-size:2.25rem;font-weight:700;color:#2d4a3e;
       line-height:1.55;margin-bottom:20px;
     }
-    .lead{font-size:1rem;line-height:2;color:#3a5a4e;}
+    .lead{font-size:1rem;line-height:2;color:#2d4a3e;}
 
     /* Buttons */
     .teal-btn a{
       display:inline-flex;align-items:center;gap:12px;
       background:#009688;color:#fff;font-size:1.1rem;font-weight:600;
       padding:20px 72px;border-radius:999px;
-      font-family:'Zen Maru Gothic',serif;transition:all .3s;
+      font-family:'M PLUS Rounded 1c',sans-serif;transition:all .3s;
     }
     .teal-btn a:hover{opacity:.85;transform:translateY(-2px);}
     .teal-btn a::after{
@@ -69,7 +69,7 @@
       display:inline-flex;align-items:center;gap:12px;
       background:#f0981c;color:#fff;font-size:1.1rem;font-weight:600;
       padding:20px 72px;border-radius:999px;
-      font-family:'Zen Maru Gothic',serif;transition:all .3s;
+      font-family:'M PLUS Rounded 1c',sans-serif;transition:all .3s;
     }
     .orange-btn a:hover{opacity:.85;transform:translateY(-2px);}
     .orange-btn a::after{
@@ -100,7 +100,8 @@
     .site-logo img{height:54px;width:auto;}
     .recruit-badge{
       display:inline-block;border:2px solid #009688;color:#009688;
-      font-size:.75rem;font-weight:700;padding:2px 14px;border-radius:4px;margin-top:4px;
+      font-size:.7rem;font-weight:700;padding:1px 14px;border-radius:4px;margin-top:8px;
+      text-align:center;
     }
     .gnav-list{display:flex;gap:24px;align-items:center;}
     .gnav-list li a{
@@ -116,7 +117,7 @@
     /* ===== MAIN VISUAL ===== */
     .main-visual{
       margin-top:80px;position:relative;width:100%;
-      height:640px;overflow:hidden;
+      height:740px;overflow:hidden;
     }
     .mv-img{
       width:100%;height:100%;
@@ -130,10 +131,10 @@
       content:'';position:absolute;inset:0;
       background:linear-gradient(
         to bottom,
-        rgba(0,80,70,.15) 0%,
-        rgba(0,80,70,.25) 30%,
-        rgba(0,80,70,.50) 65%,
-        rgba(0,60,50,.70) 100%
+        rgba(0,80,70,.05) 0%,
+        rgba(0,80,70,.12) 30%,
+        rgba(0,80,70,.30) 65%,
+        rgba(0,60,50,.50) 100%
       );
       z-index:1;
     }
@@ -192,7 +193,7 @@
     .message .name{text-align:right;margin-top:20px;font-size:1rem;}
     .message .name span{font-size:1.6rem;font-weight:700;}
     .message .name .en{font-size:.75rem;color:#aaa;}
-    .message .btn{margin-top:28px;}
+    .message .btn{margin-top:48px;}
 
     /* Photo Gallery */
     .photo_gallery{margin-top:48px;overflow:hidden;}
@@ -218,7 +219,7 @@
     }
     .top-link a{
       display:flex;align-items:center;gap:16px;
-      padding:24px 20px;border-bottom:2px dotted #b0d0c8;position:relative;
+      padding:28px 24px;border-bottom:2px dotted #b0d0c8;position:relative;
     }
     .top-link:nth-child(odd) a{border-right:2px dotted #b0d0c8;}
     .top-link:nth-child(n+3) a{border-bottom:none;}
@@ -251,7 +252,7 @@
     .doctor-caption .name-line .name{font-size:1.5rem;font-weight:700;}
     .doctor-caption .name-line .name-en{
       font-family:'Montserrat',sans-serif;color:#009688;font-size:.8rem;
-      font-weight:500;margin-left:8px;
+      font-weight:500;display:block;margin-top:-2px;
     }
 
     /* ===== JOBS ===== */
@@ -268,7 +269,7 @@
       align-items:stretch;position:relative;
     }
     .job-link__inner:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,150,136,.12);}
-    .job-link .img{width:200px;flex-shrink:0;overflow:hidden;}
+    .job-link .img{width:160px;flex-shrink:0;overflow:hidden;}
     .job-link .img img, .recruit-link .img img{
       width:100%;height:100%;min-height:150px;object-fit:cover;
     }
@@ -295,7 +296,7 @@
       flex:1;border-radius:8px;overflow:hidden;
     }
     .intrview-bg img{
-      width:100%;height:100%;object-fit:cover;filter:brightness(.7) saturate(.6);
+      width:100%;height:100%;object-fit:cover;filter:brightness(.85) saturate(.8);
     }
     .intrview-content{
       position:relative;z-index:2;text-align:center;
@@ -304,7 +305,7 @@
     }
     .intrview-content .headline{margin-bottom:12px;}
     .intrview-content .lead{margin-bottom:8px;}
-    .intrview-content .sub-lead{font-size:.9rem;color:#7a9a90;margin-bottom:28px;}
+    .intrview-content .sub-lead{font-size:.9rem;color:#7a9a90;margin-bottom:36px;}
 
     /* ===== ENVIRONMENT ===== */
     .environment-wrapper{padding:120px 0;background:#f7fbf9;}
@@ -312,9 +313,9 @@
     .environment-wrapper .img img{
       width:100%;height:220px;object-fit:cover;border-radius:20px;
     }
-    .environment-wrapper .txt .headline{font-size:1.8rem;}
-    .env-links{background:#e8f5f3;border-radius:16px;padding:8px 28px;margin-top:28px;}
-    .env-link{display:flex;align-items:center;gap:16px;padding:18px 0;}
+    .environment-wrapper .txt .headline{font-size:2rem;}
+    .env-links{background:#fff;border-radius:16px;padding:8px 28px;margin-top:28px;border:1px solid #c8e0d8;}
+    .env-link{display:flex;align-items:center;gap:16px;padding:22px 0;}
     .env-link+.env-link{border-top:2px dotted #b0d0c8;}
 
     /* ===== FAQ ===== */
@@ -346,8 +347,8 @@
       padding:100px 0;
       background-color:#e8f5f3;
       background-image:
-        radial-gradient(#c8e8e0 3px,transparent 3px),
-        radial-gradient(#c8e8e0 3px,transparent 3px);
+        radial-gradient(#d8efe8 2.5px,transparent 2.5px),
+        radial-gradient(#d8efe8 2.5px,transparent 2.5px);
       background-size:24px 24px;
       background-position:0 0,12px 12px;
     }
@@ -367,7 +368,26 @@
     .before-card-desc{font-size:.85rem;color:#7a9a90;margin-top:16px;line-height:1.9;}
 
     /* ===== RECRUIT ===== */
-    .footer-recruit-wrapper{padding:100px 0;background:#e8f5f3;}
+    .footer-recruit-wrapper{padding:100px 0;background:#e8f5f3;position:relative;}
+    .recruit-deco{
+      position:absolute;inset:0;pointer-events:none;overflow:hidden;
+    }
+    .recruit-deco::before{
+      content:'';position:absolute;top:-60px;right:-40px;
+      width:200px;height:200px;border-radius:50%;
+      background:rgba(0,150,136,.08);
+    }
+    .recruit-deco::after{
+      content:'';position:absolute;bottom:-40px;left:-30px;
+      width:160px;height:160px;border-radius:50%;
+      background:rgba(240,152,28,.06);
+    }
+    .recruit-photo-row{
+      display:flex;gap:12px;justify-content:center;margin-bottom:40px;
+    }
+    .recruit-photo-row img{
+      width:160px;height:120px;object-fit:cover;border-radius:12px;
+    }
     .recruit-links{
       display:grid;grid-template-columns:1fr;gap:24px;
       max-width:560px;margin:40px auto 0;
@@ -378,7 +398,7 @@
       align-items:stretch;position:relative;
     }
     .recruit-link__inner:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,150,136,.12);}
-    .recruit-link .img{width:200px;flex-shrink:0;overflow:hidden;}
+    .recruit-link .img{width:160px;flex-shrink:0;overflow:hidden;}
     .recruit-link .txt{
       flex:1;padding:24px 20px;display:flex;flex-direction:column;justify-content:center;
     }
@@ -393,9 +413,9 @@
     /* ===== FOOTER SITEMAP ===== */
     .footer-sitemap{padding:48px 0;border-top:1px solid #c8e0d8;background:#f7fbf9;}
     .sitemap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
-    .sitemap-main-link{font-weight:700;font-size:.9rem;display:block;margin-bottom:10px;}
+    .sitemap-main-link{font-weight:700;font-size:.95rem;display:block;margin-bottom:10px;}
     .sitemap-sub-list li{margin-bottom:4px;}
-    .sitemap-sub-list li a{font-size:.8rem;color:#7a9a90;display:flex;align-items:center;gap:4px;}
+    .sitemap-sub-list li a{font-size:.85rem;color:#4a6a60;display:flex;align-items:center;gap:4px;}
     .sitemap-sub-list li a::before{content:'-';color:#ccc;}
 
     /* ===== FOOTER INFO ===== */
@@ -413,12 +433,12 @@
       padding:12px 24px;border-radius:999px;font-weight:600;font-size:.9rem;max-width:260px;
     }
     .footer-btn:hover{background:#009688;color:#fff;}
-    .footer-address{font-size:.85rem;color:#7a9a90;}
+    .footer-address{font-size:.95rem;color:#2d4a3e;}
     .footer-tel{
       font-family:'Montserrat',sans-serif;
       font-size:1.8rem;font-weight:700;color:#009688;margin:8px 0 16px;
     }
-    .footer-tel span{font-family:'Zen Maru Gothic',serif;font-size:1rem;}
+    .footer-tel span{font-family:'M PLUS Rounded 1c',sans-serif;font-size:1rem;}
 
     /* Schedule */
     .schedule-table{width:100%;border-collapse:collapse;font-size:.85rem;border-radius:12px;overflow:hidden;}
@@ -447,6 +467,7 @@
       writing-mode:vertical-rl;padding:20px 10px;
       font-size:.85rem;font-weight:700;color:#fff;
       display:flex;align-items:center;gap:8px;
+      letter-spacing:.3em;
     }
     .fixed-btn a:first-child{background:#009688;border-radius:8px 0 0 0;}
     .fixed-btn a:nth-child(2){background:#f0981c;border-radius:0 0 0 8px;}
@@ -847,39 +868,17 @@
                 <div class="link-txt"><span class="ttl">院内設備ギャラリー</span><span class="sub">画像で働く環境をイメージできる</span></div>
                 <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
               </a>
+              <a href="#" class="env-link">
+                <span class="link-num">05.</span>
+                <div class="link-txt"><span class="ttl">よくある質問</span><span class="sub">聞きにくいことも、ここで解決</span></div>
+                <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
-    <section class="faq-wrapper">
-      <div class="faq-bg-overlay"></div>
-      <!-- Phase3: 確信 — 右から中央下へ（不安を解消し確信へ） -->
-      <div class="paw-trail paw-phase3" style="--paw-opacity:.28;">
-        <div class="paw-step" style="right:8%;top:8%;transform:rotate(210deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
-        <div class="paw-step" style="right:15%;top:22%;transform:rotate(205deg);animation-delay:.65s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
-        <div class="paw-step" style="right:22%;top:38%;transform:rotate(215deg);animation-delay:1.3s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
-        <div class="paw-step" style="left:38%;top:55%;transform:rotate(195deg);animation-delay:1.95s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
-        <div class="paw-step" style="left:32%;top:72%;transform:rotate(188deg);animation-delay:2.6s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
-      </div>
-      <div class="main-wrapper">
-        <div class="faq-content">
-          <div class="faq-icons">
-            <div class="faq-icon faq-icon-q">Q</div>
-            <div class="faq-icon faq-icon-a">A</div>
-          </div>
-          <p><span class="hl-en hl-en-teal">FAQ</span></p>
-          <h2 class="headline">よくある質問</h2>
-          <p class="lead" style="margin-bottom:28px;">
-            聞きにくいことや、ささいなことも、<br>
-            ここで解決します！
-          </p>
-          <div class="btn teal-btn"><a href="#">よくある質問を見る</a></div>
-        </div>
-      </div>
-    </section>
 
     <!-- ===== BEFORE APPLYING ===== -->
     <section class="before-applying-wrapper" style="position:relative;">
@@ -920,7 +919,8 @@
 
   <!-- ===== RECRUIT ===== -->
   <footer id="colophon">
-    <div class="footer-recruit-wrapper" style="position:relative;overflow:hidden;">
+    <div class="footer-recruit-wrapper" style="overflow:hidden;">
+      <div class="recruit-deco"></div>
       <!-- Phase5: ゴール到達 — 足跡が中央に集まって到着！ -->
       <div class="paw-trail paw-phase5" style="--paw-opacity:.35;">
         <!-- 左上から中央へ -->
@@ -936,6 +936,12 @@
         <p><span class="hl-en hl-en-teal">RECRUIT</span></p>
         <h2 class="headline">募集要項・エントリー</h2>
         <p class="lead">ホワイトエッセンスを1から学べるチャンス。<br>新卒／中途、どちらの方も大歓迎です。</p>
+        <div class="recruit-photo-row">
+          <img src="写真/診療風景/歯科衛生士/DSC_0287_補正.jpg" alt="歯科衛生士">
+          <img src="写真/外観・内観/ホワイトエッセンス/DSC_0270_補正.jpg" alt="ホワイトエッセンス">
+          <img src="写真/お昼休憩/DSC_0402_補正.jpg" alt="スタッフ">
+          <img src="写真/診療風景/複数人/DSC_0533_補正.jpg" alt="チーム">
+        </div>
         <ul class="recruit-links">
           <li class="recruit-link"><a href="#" class="recruit-link__inner">
             <div class="img"><img src="写真/診療風景/歯科衛生士/DSC_0267_補正.jpg" alt="歯科衛生士"></div>
