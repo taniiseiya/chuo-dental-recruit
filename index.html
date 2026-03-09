@@ -314,9 +314,13 @@
 
     /* ===== ENVIRONMENT ===== */
     .environment-wrapper{padding:120px 0;background:#f7fbf9;}
-    .environment-wrapper .img{display:flex;flex-direction:column;gap:16px;}
-    .environment-wrapper .img img{
-      width:100%;height:220px;object-fit:cover;border-radius:20px;
+    .environment-wrapper .img{display:flex;flex-direction:column;gap:12px;}
+    .environment-wrapper .img-top img{
+      width:100%;height:240px;object-fit:cover;border-radius:16px;
+    }
+    .environment-wrapper .img-bottom{display:flex;gap:12px;}
+    .environment-wrapper .img-bottom img{
+      width:100%;height:180px;object-fit:cover;border-radius:16px;
     }
     .environment-wrapper .txt .headline{font-size:2rem;}
     .env-links{background:#fff;border-radius:16px;padding:8px 28px;margin-top:28px;border:1px solid #c8e0d8;}
@@ -814,8 +818,11 @@
       <div class="main-wrapper">
         <div class="repeat-grow1-1">
           <div class="img">
-            <img src="写真/お昼休憩/DSC_0405_補正.jpg" alt="スタッフの様子" class="radius-small">
-            <img src="写真/外観・内観/内観/DSC_0397_補正.jpg" alt="院内の様子" class="radius-small">
+            <div class="img-top"><img src="写真/お昼休憩/DSC_0405_補正.jpg" alt="スタッフの様子"></div>
+            <div class="img-bottom">
+              <img src="写真/外観・内観/内観/DSC_0397_補正.jpg" alt="院内の様子">
+              <img src="写真/診療風景/複数人/DSC_0377_補正.jpg" alt="チーム診療の様子">
+            </div>
           </div>
           <div class="txt">
             <p><span class="hl-en hl-en-teal">ENVIRONMENT</span></p>
