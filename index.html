@@ -357,8 +357,8 @@
       padding:100px 0;
       background-color:#e8f5f3;
       background-image:
-        radial-gradient(#d8efe8 2.5px,transparent 2.5px),
-        radial-gradient(#d8efe8 2.5px,transparent 2.5px);
+        radial-gradient(#e0f3ee 2px,transparent 2px),
+        radial-gradient(#e0f3ee 2px,transparent 2px);
       background-size:24px 24px;
       background-position:0 0,12px 12px;
     }
@@ -375,7 +375,7 @@
       font-size:1.1rem;font-weight:700;position:relative;margin-top:-28px;z-index:1;
       box-shadow:0 4px 16px rgba(0,0,0,.08);
     }
-    .before-card-desc{font-size:.85rem;color:#7a9a90;margin-top:16px;line-height:1.9;}
+    .before-card-desc{font-size:.9rem;color:#2d4a3e;margin-top:16px;line-height:1.9;}
 
     /* ===== RECRUIT ===== */
     .footer-recruit-wrapper{padding:100px 0;background:#e8f5f3;position:relative;}
@@ -509,24 +509,24 @@
     }
 
     /* --- フェーズ1: 興味 (MESSAGE / CLINIC) — 小さく淡い --- */
-    .paw-phase1 .paw-step svg{width:22px;height:30px;}
-    .paw-phase1 .paw-step{animation:pawWalk 5s ease-in-out infinite;}
+    .paw-phase1 .paw-step svg{width:16px;height:22px;}
+    .paw-phase1 .paw-step{animation:pawWalk 7s ease-in-out infinite;}
 
-    /* --- フェーズ2: 共感 (DIRECTOR / JOBS) — やや大きく --- */
-    .paw-phase2 .paw-step svg{width:26px;height:35px;}
-    .paw-phase2 .paw-step{animation:pawWalk 4.5s ease-in-out infinite;}
+    /* --- フェーズ2: 共感 (DIRECTOR) — やや大きく --- */
+    .paw-phase2 .paw-step svg{width:18px;height:24px;}
+    .paw-phase2 .paw-step{animation:pawWalk 6.5s ease-in-out infinite;}
 
     /* --- フェーズ3: 安心 (ENVIRONMENT / FAQ) — はっきり --- */
-    .paw-phase3 .paw-step svg{width:30px;height:40px;}
-    .paw-phase3 .paw-step{animation:pawWalk 4s ease-in-out infinite;}
+    .paw-phase3 .paw-step svg{width:20px;height:27px;}
+    .paw-phase3 .paw-step{animation:pawWalk 6s ease-in-out infinite;}
 
     /* --- フェーズ4: 行動 (BEFORE APPLYING) — 大きく集約 --- */
-    .paw-phase4 .paw-step svg{width:34px;height:46px;}
-    .paw-phase4 .paw-step{animation:pawWalk 3.5s ease-in-out infinite;}
+    .paw-phase4 .paw-step svg{width:22px;height:30px;}
+    .paw-phase4 .paw-step{animation:pawWalk 5.5s ease-in-out infinite;}
 
     /* --- フェーズ5: ゴール到達 (RECRUIT) — 最大・華やか --- */
-    .paw-phase5 .paw-step svg{width:38px;height:50px;}
-    .paw-phase5 .paw-step{animation:pawGoal 3s ease-in-out infinite;}
+    .paw-phase5 .paw-step svg{width:26px;height:35px;}
+    .paw-phase5 .paw-step{animation:pawGoal 5s ease-in-out infinite;}
 
     /* 歩行アニメーション (順番に足跡が現れて消える) */
     @keyframes pawWalk{
@@ -614,7 +614,7 @@
     <!-- ===== MESSAGE ===== -->
     <section class="message-wrapper">
       <!-- Phase1: 興味 — 右側を下向きに歩き始める（ここから旅が始まる） -->
-      <div class="paw-trail paw-phase1" style="--paw-opacity:.15;">
+      <div class="paw-trail paw-phase1" style="--paw-opacity:.08;">
         <div class="paw-step" style="right:8%;top:12%;transform:rotate(190deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#b2dfdb"/></svg></div>
         <div class="paw-step" style="right:6%;top:24%;transform:rotate(185deg);animation-delay:.8s;"><svg><use href="#rabbit-paw" fill="#b2dfdb"/></svg></div>
         <div class="paw-step" style="right:9%;top:36%;transform:rotate(195deg);animation-delay:1.6s;"><svg><use href="#rabbit-paw" fill="#b2dfdb"/></svg></div>
@@ -744,7 +744,7 @@
     <!-- ===== DIRECTOR ===== -->
     <section class="doctor-wrapper" style="position:relative;">
       <!-- Phase2: 共感 — 右上から左下へ斜めに渡る（院長を見て共感） -->
-      <div class="paw-trail paw-phase2" style="--paw-opacity:.20;">
+      <div class="paw-trail paw-phase2" style="--paw-opacity:.10;">
         <div class="paw-step" style="right:6%;top:8%;transform:rotate(210deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#80cbc4"/></svg></div>
         <div class="paw-step" style="right:14%;top:22%;transform:rotate(205deg);animation-delay:.7s;"><svg><use href="#rabbit-paw" fill="#80cbc4"/></svg></div>
         <div class="paw-step" style="left:42%;top:40%;transform:rotate(215deg);animation-delay:1.4s;"><svg><use href="#rabbit-paw" fill="#80cbc4"/></svg></div>
@@ -809,7 +809,7 @@
     <!-- ===== ENVIRONMENT ===== -->
     <section class="environment-wrapper" style="position:relative;">
       <!-- Phase3: 安心 — 右側を下へ（環境を確認して安心する） -->
-      <div class="paw-trail paw-phase3" style="--paw-opacity:.25;">
+      <div class="paw-trail paw-phase3" style="--paw-opacity:.12;">
         <div class="paw-step" style="right:5%;top:8%;transform:rotate(185deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
         <div class="paw-step" style="right:7%;top:25%;transform:rotate(190deg);animation-delay:.65s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
         <div class="paw-step" style="right:4%;top:44%;transform:rotate(182deg);animation-delay:1.3s;"><svg><use href="#rabbit-paw" fill="#4db6ac"/></svg></div>
@@ -889,14 +889,14 @@
     <section class="before-applying-wrapper" style="position:relative;">
       <!-- Phase4: 行動 — 左右から中央下部へ収束（応募への決意が固まる） -->
       <!-- 左の道 -->
-      <div class="paw-trail paw-phase4" style="--paw-opacity:.30;">
+      <div class="paw-trail paw-phase4" style="--paw-opacity:.14;">
         <div class="paw-step" style="left:4%;top:10%;transform:rotate(155deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
         <div class="paw-step" style="left:12%;top:30%;transform:rotate(145deg);animation-delay:.6s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
         <div class="paw-step" style="left:22%;top:50%;transform:rotate(150deg);animation-delay:1.2s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
         <div class="paw-step" style="left:34%;top:72%;transform:rotate(160deg);animation-delay:1.8s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
       </div>
       <!-- 右の道 -->
-      <div class="paw-trail paw-phase4" style="--paw-opacity:.30;">
+      <div class="paw-trail paw-phase4" style="--paw-opacity:.14;">
         <div class="paw-step" style="right:4%;top:10%;transform:rotate(205deg);animation-delay:.3s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
         <div class="paw-step" style="right:12%;top:30%;transform:rotate(215deg);animation-delay:.9s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
         <div class="paw-step" style="right:22%;top:50%;transform:rotate(210deg);animation-delay:1.5s;"><svg><use href="#rabbit-paw" fill="#26a69a"/></svg></div>
@@ -927,7 +927,7 @@
     <div class="footer-recruit-wrapper" style="overflow:hidden;">
       <div class="recruit-deco"></div>
       <!-- Phase5: ゴール到達 — 足跡が中央に集まって到着！ -->
-      <div class="paw-trail paw-phase5" style="--paw-opacity:.35;">
+      <div class="paw-trail paw-phase5" style="--paw-opacity:.16;">
         <!-- 左上から中央へ -->
         <div class="paw-step" style="left:8%;top:8%;transform:rotate(148deg);animation-delay:0s;"><svg><use href="#rabbit-paw" fill="#009688"/></svg></div>
         <div class="paw-step" style="left:18%;top:22%;transform:rotate(152deg);animation-delay:.5s;"><svg><use href="#rabbit-paw" fill="#009688"/></svg></div>
