@@ -329,17 +329,18 @@
 
     /* ===== FAQ ===== */
     .faq-wrapper{
-      padding:120px 0 200px;position:relative;overflow:hidden;
-      background:linear-gradient(135deg,#e0f2f1 0%,#f0f8f6 30%,#e8f5e9 60%,#fff8e1 100%);
+      padding:120px 0;position:relative;overflow:hidden;
     }
-    .faq-bg-overlay{
-      position:absolute;inset:0;
-      background:linear-gradient(90deg,rgba(178,223,219,.3) 0%,transparent 25%,transparent 75%,rgba(255,224,130,.3) 100%);
+    .faq-bg{
+      position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px;
     }
+    .faq-bg div{border-radius:12px;overflow:hidden;}
+    .faq-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.85) saturate(.8);}
     .faq-content{
       position:relative;z-index:2;text-align:center;
-      background:rgba(255,255,255,.92);max-width:700px;margin:0 auto;
-      padding:56px 40px;border-radius:20px;
+      background:rgba(255,255,255,.94);max-width:600px;margin:0 auto;
+      padding:56px 40px;border-radius:24px;
+      box-shadow:0 4px 30px rgba(0,0,0,.08);
     }
     .faq-icons{display:flex;justify-content:center;gap:0;margin-bottom:20px;}
     .faq-icon{
@@ -863,6 +864,26 @@
       </div>
     </section>
 
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-wrapper">
+      <div class="faq-bg">
+        <div><img src="写真/診療風景/歯科衛生士/DSC_0287_補正.jpg" alt=""></div>
+        <div><img src="写真/診療風景/複数人/DSC_0535_補正.jpg" alt=""></div>
+      </div>
+      <div class="main-wrapper">
+        <div class="faq-content">
+          <div class="faq-icons">
+            <span class="faq-icon faq-icon-q">Q</span>
+            <span class="faq-icon faq-icon-a">A</span>
+          </div>
+          <p><span class="hl-en hl-en-teal">FAQ</span></p>
+          <h2 class="headline">よくある質問</h2>
+          <p class="lead">聞きにくいことや、ささいなことも、<br>ここで解決します！</p>
+          <div class="btn teal-btn"><a href="#">よくある質問を見る</a></div>
+        </div>
+      </div>
+    </section>
 
     <!-- ===== BEFORE APPLYING ===== -->
     <section class="before-applying-wrapper" style="position:relative;">
