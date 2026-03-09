@@ -239,12 +239,11 @@
     .doctor-wrapper .txt .headline{font-size:1.75rem;margin-bottom:16px;}
     .doctor-wrapper .txt .lead{margin-bottom:28px;}
     .doctor-links{
-      display:grid;grid-template-columns:1fr 1fr;
-      background:#fff;border-radius:16px;overflow:hidden;border:1px solid #c8e0d8;
-      margin-top:48px;
+      background:#fff;border-radius:16px;padding:8px 28px;
+      border:1px solid #c8e0d8;margin-top:28px;
     }
-    .doctor-link{display:flex;align-items:center;gap:16px;padding:28px 24px;}
-    .doctor-link+.doctor-link{border-left:2px dotted #b0d0c8;}
+    .doctor-link{display:flex;align-items:center;gap:16px;padding:22px 0;}
+    .doctor-link+.doctor-link{border-top:2px dotted #b0d0c8;}
     .doctor-img img{
       width:100%;height:480px;object-fit:cover;border-radius:20px;
     }
@@ -293,18 +292,21 @@
       overflow:hidden;
     }
     .intrview-bg{
-      position:absolute;inset:0;display:flex;gap:8px;
+      position:absolute;inset:0;
+      display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;
+      gap:10px;padding:10px;
     }
     .intrview-bg div{
-      flex:1;border-radius:8px;overflow:hidden;
+      border-radius:12px;overflow:hidden;
     }
     .intrview-bg img{
-      width:100%;height:100%;object-fit:cover;filter:brightness(.9) saturate(.85);
+      width:100%;height:100%;object-fit:cover;filter:brightness(.88) saturate(.85);
     }
     .intrview-content{
       position:relative;z-index:2;text-align:center;
-      background:rgba(255,255,255,.93);max-width:560px;margin:0 auto;
+      background:rgba(255,255,255,.92);max-width:540px;margin:0 auto;
       padding:56px 40px;border-radius:20px;
+      box-shadow:0 4px 30px rgba(0,0,0,.08);
     }
     .intrview-content .headline{margin-bottom:12px;}
     .intrview-content .lead{margin-bottom:8px;}
@@ -748,6 +750,18 @@
         <div class="repeat-grow1-1">
           <div class="txt">
             <h2 class="headline">目指しているのは<br>「通うのが楽しみになる歯科医院」。</h2>
+            <div class="doctor-links">
+              <a href="#" class="doctor-link">
+                <span class="link-num">01.</span>
+                <div class="link-txt"><span class="ttl">院長プロフィール</span><span class="sub">小川院長のプロフィールをまとめました</span></div>
+                <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </a>
+              <a href="#" class="doctor-link">
+                <span class="link-num">02.</span>
+                <div class="link-txt"><span class="ttl">院長に聞く99の質問</span><span class="sub">プライベートから好きなものまで、院長の全てが分かる</span></div>
+                <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </a>
+            </div>
           </div>
           <div class="img">
             <div class="doctor-img">
@@ -763,29 +777,18 @@
             </div>
           </div>
         </div>
-        <div class="doctor-links">
-          <a href="#" class="doctor-link">
-            <span class="link-num">01.</span>
-            <div class="link-txt"><span class="ttl">院長プロフィール</span><span class="sub">小川院長のプロフィールをまとめました</span></div>
-            <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </a>
-          <a href="#" class="doctor-link">
-            <span class="link-num">02.</span>
-            <div class="link-txt"><span class="ttl">院長に聞く99の質問</span><span class="sub">プライベートから好きなものまで、院長の全てが分かる</span></div>
-            <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </a>
-        </div>
       </div>
     </section>
 
     <!-- ===== INTERVIEW ===== -->
     <section class="intrview-wrapper">
       <div class="intrview-bg">
-        <div><img src="写真/診療風景/歯科衛生士/DSC_0248_補正.jpg" alt=""></div>
-        <div><img src="写真/診療風景/複数人/DSC_0521_補正.jpg" alt=""></div>
-        <div><img src="写真/集合写真/歯科衛生士/DSC_0070_補正.jpg" alt=""></div>
-        <div><img src="写真/診療風景/歯科医師/DSC_0309_補正.jpg" alt=""></div>
-        <div><img src="写真/お昼休憩/DSC_0407_補正.jpg" alt=""></div>
+        <div><img src="写真/診療風景/歯科衛生士/DSC_0248_補正.jpg" alt="歯科衛生士の診療風景"></div>
+        <div><img src="写真/診療風景/複数人/DSC_0521_補正.jpg" alt="スタッフの協力風景"></div>
+        <div><img src="写真/集合写真/歯科衛生士/DSC_0070_補正.jpg" alt="歯科衛生士の集合写真"></div>
+        <div><img src="写真/お昼休憩/DSC_0407_補正.jpg" alt="お昼休憩の様子"></div>
+        <div><img src="写真/診療風景/複数人/DSC_0526_補正.jpg" alt="チーム診療の様子"></div>
+        <div><img src="写真/診療風景/歯科衛生士/DSC_0173_補正.jpg" alt="歯科衛生士の業務風景"></div>
       </div>
       <div class="main-wrapper">
         <div class="intrview-content">
