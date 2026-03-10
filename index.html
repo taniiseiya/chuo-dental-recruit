@@ -381,47 +381,45 @@
     .before-card-desc{font-size:.9rem;color:#2d4a3e;margin-top:16px;line-height:1.9;}
 
     /* ===== RECRUIT ===== */
-    .footer-recruit-wrapper{padding:100px 0;background:#e8f5f3;position:relative;}
+    .footer-recruit-wrapper{padding:100px 0;background:#1a6b5f;position:relative;color:#fff;}
+    .footer-recruit-wrapper .headline{color:#fff;}
+    .footer-recruit-wrapper .lead{color:rgba(255,255,255,.85);}
+    .footer-recruit-wrapper .hl-en-teal{color:rgba(255,255,255,.7);}
+    .footer-recruit-wrapper .hl-en-teal::before{background:rgba(255,255,255,.7);}
     .recruit-deco{
       position:absolute;inset:0;pointer-events:none;overflow:hidden;
     }
     .recruit-deco::before{
       content:'';position:absolute;top:-60px;right:-40px;
       width:200px;height:200px;border-radius:50%;
-      background:rgba(0,150,136,.08);
+      background:rgba(255,255,255,.06);
     }
     .recruit-deco::after{
       content:'';position:absolute;bottom:-40px;left:-30px;
       width:160px;height:160px;border-radius:50%;
       background:rgba(240,152,28,.06);
     }
-    .recruit-photo-row{
-      display:flex;gap:12px;justify-content:center;margin-bottom:40px;
-    }
-    .recruit-photo-row img{
-      width:160px;height:120px;object-fit:cover;border-radius:12px;
-    }
     .recruit-links{
       display:grid;grid-template-columns:1fr;gap:24px;
-      max-width:560px;margin:40px auto 0;
+      max-width:620px;margin:40px auto 0;
     }
     .recruit-link__inner{
-      display:flex;border:3px solid #009688;border-radius:18px;
+      display:flex;border:3px solid #fff;border-radius:18px;
       overflow:hidden;background:#fff;transition:transform .3s;
       align-items:stretch;position:relative;
     }
-    .recruit-link__inner:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,150,136,.12);}
-    .recruit-link .img{width:160px;flex-shrink:0;overflow:hidden;}
+    .recruit-link__inner:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.2);}
+    .recruit-link .img{width:200px;flex-shrink:0;overflow:hidden;}
     .recruit-link .txt{
-      flex:1;padding:24px 20px;display:flex;flex-direction:column;justify-content:center;
+      flex:1;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;
     }
     .recruit-en{
-      font-family:'Montserrat',sans-serif;font-size:.72rem;
-      color:#009688;font-weight:600;letter-spacing:.05em;margin-bottom:4px;display:block;
+      font-family:'Montserrat',sans-serif;font-size:.82rem;
+      color:#009688;font-weight:600;letter-spacing:.05em;margin-bottom:6px;display:block;
     }
-    .recruit-ttl{font-size:1.3rem;font-weight:700;display:block;}
-    .recruit-sub{font-size:.85rem;color:#7a9a90;margin-top:4px;display:block;}
-    .recruit-arrow{position:absolute;right:14px;top:50%;transform:translateY(-50%);}
+    .recruit-ttl{font-size:1.5rem;font-weight:700;display:block;color:#2d4a3e;}
+    .recruit-sub{font-size:.95rem;color:#5a7a70;margin-top:6px;display:block;}
+    .recruit-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);}
 
     /* ===== FOOTER SITEMAP ===== */
     .footer-sitemap{padding:48px 0;border-top:1px solid #c8e0d8;background:#f7fbf9;}
@@ -957,12 +955,6 @@
         <p><span class="hl-en hl-en-teal">RECRUIT</span></p>
         <h2 class="headline">募集要項・エントリー</h2>
         <p class="lead">ホワイトエッセンスを1から学べるチャンス。<br>新卒／中途、どちらの方も大歓迎です。</p>
-        <div class="recruit-photo-row">
-          <img src="写真/診療風景/歯科衛生士/DSC_0287_補正.jpg" alt="歯科衛生士">
-          <img src="写真/外観・内観/ホワイトエッセンス/DSC_0270_補正.jpg" alt="ホワイトエッセンス">
-          <img src="写真/お昼休憩/DSC_0402_補正.jpg" alt="スタッフ">
-          <img src="写真/診療風景/複数人/DSC_0533_補正.jpg" alt="チーム">
-        </div>
         <ul class="recruit-links">
           <li class="recruit-link"><a href="#" class="recruit-link__inner">
             <div class="img"><img src="写真/診療風景/歯科衛生士/DSC_0267_補正.jpg" alt="歯科衛生士"></div>
