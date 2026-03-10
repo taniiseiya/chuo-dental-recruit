@@ -404,15 +404,19 @@
       max-width:720px;margin:48px auto 0;
     }
     .recruit-link__inner{
-      display:flex;border:none;border-radius:20px;
-      background:#fff;transition:transform .3s,box-shadow .3s;
+      display:flex;border:3px solid #009688;border-radius:20px;
+      background:#fff;transition:transform .3s,box-shadow .3s,border-color .3s;
       align-items:stretch;position:relative;
       box-shadow:0 8px 32px rgba(0,0,0,.18);overflow:hidden;
     }
-    .recruit-link__inner:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.28);}
-    .recruit-link .img{width:260px;flex-shrink:0;overflow:hidden;border-radius:20px 0 0 20px;}
+    .recruit-link__inner:hover{
+      transform:translateY(-6px);
+      box-shadow:0 16px 48px rgba(0,0,0,.28);
+      border-color:#00796b;
+    }
+    .recruit-link .img{width:260px;flex-shrink:0;overflow:hidden;}
     .recruit-link .txt{
-      flex:1;padding:32px 28px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+      flex:1;padding:32px 28px 32px 24px;display:flex;flex-direction:column;justify-content:center;
     }
     .recruit-en{
       font-family:'Montserrat',sans-serif;font-size:.82rem;
@@ -420,7 +424,20 @@
     }
     .recruit-ttl{font-size:1.7rem;font-weight:700;display:block;color:#2d4a3e;}
     .recruit-sub{font-size:.95rem;color:#5a7a70;margin-top:6px;display:block;}
-    .recruit-arrow{position:absolute;right:20px;top:50%;transform:translateY(-50%);}
+    .recruit-arrow{
+      position:absolute;right:20px;top:50%;transform:translateY(-50%);
+      width:48px;height:48px;border-radius:50%;
+      background:#009688;border:none;
+      display:inline-flex;align-items:center;justify-content:center;
+      animation:cta-pulse 2.5s ease-in-out infinite;
+      transition:background .3s;
+    }
+    .recruit-arrow svg{width:20px;height:20px;stroke:#fff;}
+    .recruit-link__inner:hover .recruit-arrow{background:#00796b;}
+    @keyframes cta-pulse{
+      0%,100%{box-shadow:0 0 0 0 rgba(0,150,136,.4);}
+      50%{box-shadow:0 0 0 10px rgba(0,150,136,0);}
+    }
 
     /* ===== FOOTER SITEMAP ===== */
     .footer-sitemap{padding:48px 0;border-top:1px solid #c8e0d8;background:#f7fbf9;}
