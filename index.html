@@ -401,25 +401,35 @@
     }
     .recruit-links{
       display:grid;grid-template-columns:1fr;gap:24px;
-      max-width:620px;margin:40px auto 0;
+      max-width:720px;margin:48px auto 0;
     }
     .recruit-link__inner{
-      display:flex;border:3px solid #fff;border-radius:18px;
-      overflow:hidden;background:#fff;transition:transform .3s;
+      display:flex;border:none;border-radius:20px;
+      overflow:hidden;background:#fff;transition:transform .3s,box-shadow .3s;
       align-items:stretch;position:relative;
+      box-shadow:0 8px 32px rgba(0,0,0,.18);
     }
-    .recruit-link__inner:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.2);}
-    .recruit-link .img{width:200px;flex-shrink:0;overflow:hidden;}
+    .recruit-link__inner:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.28);}
+    .recruit-link .img{width:260px;flex-shrink:0;overflow:hidden;}
     .recruit-link .txt{
-      flex:1;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;
+      flex:1;padding:32px 28px;display:flex;flex-direction:column;justify-content:center;
     }
     .recruit-en{
       font-family:'Montserrat',sans-serif;font-size:.82rem;
       color:#009688;font-weight:600;letter-spacing:.05em;margin-bottom:6px;display:block;
     }
-    .recruit-ttl{font-size:1.5rem;font-weight:700;display:block;color:#2d4a3e;}
+    .recruit-ttl{font-size:1.7rem;font-weight:700;display:block;color:#2d4a3e;}
     .recruit-sub{font-size:.95rem;color:#5a7a70;margin-top:6px;display:block;}
-    .recruit-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);}
+    .recruit-cta{
+      display:inline-flex;align-items:center;gap:8px;
+      margin-top:16px;padding:10px 24px;border-radius:30px;
+      background:#009688;color:#fff;font-size:.9rem;font-weight:600;
+      transition:background .3s;width:fit-content;
+    }
+    .recruit-link__inner:hover .recruit-cta{background:#00796b;}
+    .recruit-cta svg{transition:transform .3s;}
+    .recruit-link__inner:hover .recruit-cta svg{transform:translateX(4px);}
+    .recruit-arrow{display:none;}
 
     /* ===== FOOTER SITEMAP ===== */
     .footer-sitemap{padding:48px 0;border-top:1px solid #c8e0d8;background:#f7fbf9;}
@@ -962,8 +972,8 @@
               <span class="recruit-en">DENTAL HYGIENIST</span>
               <span class="recruit-ttl">歯科衛生士</span>
               <span class="recruit-sub">正社員／パート</span>
+              <span class="recruit-cta">募集要項を見る <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </div>
-            <span class="recruit-arrow arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </a></li>
         </ul>
       </div>
