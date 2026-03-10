@@ -152,12 +152,7 @@
       font-family:'Noto Sans JP',sans-serif;
       font-size:1.3rem;font-weight:500;color:#fff;
       text-shadow:1px 1px 6px rgba(0,0,0,.5), 0 0 20px rgba(0,60,50,.3);
-      margin-bottom:12px;
-    }
-    .mv-desc{
-      font-size:.95rem;font-weight:400;color:rgba(255,255,255,.92);
-      text-shadow:1px 1px 4px rgba(0,0,0,.4);
-      margin-bottom:24px;line-height:1.8;
+      margin-bottom:24px;
     }
     .mv-points{display:flex;gap:16px;justify-content:center;}
     .mv-point{
@@ -320,8 +315,10 @@
     /* ===== ENVIRONMENT ===== */
     .environment-wrapper{padding:120px 0;background:#f7fbf9;}
     .environment-wrapper .img{display:flex;flex-direction:column;gap:12px;}
+    .environment-wrapper .img-top{overflow:hidden;border-radius:16px;}
     .environment-wrapper .img-top img{
       width:100%;height:240px;object-fit:cover;border-radius:16px;
+      object-position:30% 25%;transform:scale(1.1);
     }
     .environment-wrapper .img-bottom{display:flex;gap:12px;}
     .environment-wrapper .img-bottom img{
@@ -610,7 +607,6 @@
       <div class="mv-content">
         <h2 class="mv-title">きれいなお口を守り、<br>笑顔を増やす。</h2>
         <p class="mv-sub">道内で珍しい「ホワイトエッセンス」加盟院。</p>
-        <p class="mv-desc">当院には、「ホワイトエッセンス施術」や質の高いクリーニング技術を求めて、<br>さまざまな年代の患者様がいらっしゃいます。</p>
         <div class="mv-points">
           <div class="mv-point">
             <div class="mv-point-badge"><span class="label">POINT</span><span class="num">01</span></div>
@@ -731,6 +727,7 @@
           <div class="txt">
             <p><span class="hl-en hl-en-teal">CLINIC</span></p>
             <h2 class="headline">「歯のメンテナンス＝身だしなみの一部」<br>当院は、予防歯科に注力しています。</h2>
+            <p class="lead">当院には、「ホワイトエッセンス施術」や質の高いクリーニング技術を求めて、<br>さまざまな年代の患者様がいらっしゃいます。</p>
           </div>
         </div>
         <ul class="top-links">
@@ -840,7 +837,7 @@
             <div class="img-top"><img src="写真/お昼休憩/DSC_0405_補正.jpg" alt="スタッフの様子"></div>
             <div class="img-bottom">
               <img src="写真/外観・内観/内観/DSC_0397_補正.jpg" alt="院内の様子">
-              <img src="写真/診療風景/複数人/DSC_0377_補正.jpg" alt="チーム診療の様子">
+              <img src="写真/診療風景/歯科医師/DSC_0386_補正.jpg" alt="歯科医師の診療風景">
             </div>
           </div>
           <div class="txt">
@@ -853,26 +850,31 @@
             <div class="env-links">
               <a href="#" class="env-link">
                 <span class="link-num">01.</span>
-                <div class="link-txt"><span class="ttl">働きやすい理由</span><span class="sub">スタッフの「推しポイント」は？</span></div>
+                <div class="link-txt"><span class="ttl">業務内容</span><span class="sub">歯科衛生士のお仕事を紹介します</span></div>
                 <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
               </a>
               <a href="#" class="env-link">
                 <span class="link-num">02.</span>
-                <div class="link-txt"><span class="ttl">福利厚生</span><span class="sub">仕事以外にもうれしいメリットが</span></div>
+                <div class="link-txt"><span class="ttl">働きやすい理由</span><span class="sub">スタッフの「推しポイント」は？</span></div>
                 <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
               </a>
               <a href="#" class="env-link">
                 <span class="link-num">03.</span>
-                <div class="link-txt"><span class="ttl">教育体制</span><span class="sub">未経験のあなたも先輩たちがバックアップ</span></div>
+                <div class="link-txt"><span class="ttl">福利厚生</span><span class="sub">仕事以外にもうれしいメリットが</span></div>
                 <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
               </a>
               <a href="#" class="env-link">
                 <span class="link-num">04.</span>
-                <div class="link-txt"><span class="ttl">院内設備ギャラリー</span><span class="sub">画像で働く環境をイメージできる</span></div>
+                <div class="link-txt"><span class="ttl">教育体制</span><span class="sub">未経験のあなたも先輩たちがバックアップ</span></div>
                 <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
               </a>
               <a href="#" class="env-link">
                 <span class="link-num">05.</span>
+                <div class="link-txt"><span class="ttl">院内設備ギャラリー</span><span class="sub">画像で働く環境をイメージできる</span></div>
+                <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </a>
+              <a href="#" class="env-link">
+                <span class="link-num">06.</span>
                 <div class="link-txt"><span class="ttl">よくある質問</span><span class="sub">聞きにくいことも、ここで解決</span></div>
                 <span class="arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
               </a>
