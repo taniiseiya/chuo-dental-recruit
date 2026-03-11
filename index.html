@@ -171,7 +171,7 @@
 
     /* ===== MESSAGE ===== */
     .message-wrapper{
-      background:#f7fbf9;padding:88px 0 64px;position:relative;
+      background:#f7fbf9;padding:120px 0 64px;position:relative;
     }
     .message-wrapper::after{
       content:'';position:absolute;bottom:-60px;left:0;right:0;height:80px;
@@ -197,10 +197,12 @@
     .photo_gallery{margin-top:48px;overflow:hidden;}
     .gallery_track{display:flex;gap:12px;animation:galleryScroll 30s linear infinite;}
     @keyframes galleryScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-    .gallery_photo{flex-shrink:0;border-radius:16px;overflow:hidden;}
+    .gallery_photo{flex-shrink:0;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.1);}
     .gallery_photo:nth-child(odd){width:260px;height:340px;}
     .gallery_photo:nth-child(even){width:200px;height:250px;}
     .gallery_photo img{width:100%;height:100%;object-fit:cover;}
+    .gallery_photo:nth-child(3) img,
+    .gallery_photo:nth-child(13) img{transform:scale(1.3);}
 
     /* ===== CLINIC ===== */
     .clinic-wrapper{
@@ -414,7 +416,7 @@
       box-shadow:0 16px 48px rgba(0,0,0,.28);
       border-color:#00796b;
     }
-    .recruit-link .img{width:260px;flex-shrink:0;overflow:hidden;}
+    .recruit-link .img{width:380px;flex-shrink:0;overflow:hidden;}
     .recruit-link .txt{
       flex:1;padding:32px 28px 32px 24px;display:flex;flex-direction:column;justify-content:center;
     }
@@ -440,7 +442,7 @@
     }
 
     /* ===== FOOTER SITEMAP ===== */
-    .footer-sitemap{padding:48px 0;border-top:1px solid #c8e0d8;background:#f7fbf9;}
+    .footer-sitemap{padding:64px 0;border-top:1px solid #c8e0d8;background:#f7fbf9;margin-top:48px;}
     .sitemap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
     .sitemap-main-link{font-weight:700;font-size:.95rem;display:block;margin-bottom:10px;}
     .sitemap-sub-list li{margin-bottom:4px;}
@@ -502,8 +504,9 @@
     .fixed-btn a:nth-child(2){background:#f0981c;border-radius:0 0 0 8px;}
     .fixed-btn .instagram{
       writing-mode:horizontal-tb;padding:10px;
-      background:#fff;border:2px solid #009688;border-radius:0;
+      background:#fff;border:2px solid #009688;border-radius:0 0 0 8px;
       display:flex;align-items:center;justify-content:center;
+      margin-top:12px;
     }
 
     /* ===== TO TOP ===== */
@@ -911,8 +914,8 @@
           </div>
           <p><span class="hl-en hl-en-teal">FAQ</span></p>
           <h2 class="headline">よくある質問</h2>
-          <p class="lead">聞きにくいことや、ささいなことも、<br>ここで解決します！</p>
-          <div class="btn teal-btn"><a href="#">よくある質問を見る</a></div>
+          <p class="lead">レクレーションはあるの？有給は取りやすい？<br>そんな聞きにくいこと・些細なことをここで解決します！</p>
+          <div class="btn teal-btn" style="margin-top:40px;"><a href="#">よくある質問を見る</a></div>
         </div>
       </div>
     </section>
@@ -975,11 +978,12 @@
         <p class="lead">ホワイトエッセンスを1から学べるチャンス。<br>新卒／中途、どちらの方も大歓迎です。</p>
         <ul class="recruit-links">
           <li class="recruit-link"><a href="#" class="recruit-link__inner">
-            <div class="img"><img src="写真/診療風景/歯科衛生士/DSC_0267_補正.jpg" alt="歯科衛生士"></div>
+            <div class="img"><img src="写真/集合写真/歯科衛生士/DSC_0075_補正.jpg" alt="歯科衛生士"></div>
             <div class="txt">
               <span class="recruit-en">DENTAL HYGIENIST</span>
               <span class="recruit-ttl">歯科衛生士</span>
               <span class="recruit-sub">正社員／パート</span>
+              <span class="recruit-sub" style="margin-top:4px;font-size:.85rem;">業務内容</span>
             </div>
             <span class="recruit-arrow arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </a></li>
@@ -1025,7 +1029,8 @@
               <li><a href="#">マッチング率診断</a></li>
               <li><a href="#">医院見学のご案内</a></li>
             </ul>
-            <a href="#" class="sitemap-main-link" style="margin-top:24px;">応募・各種申し込み</a>
+            <a href="#" class="sitemap-main-link" style="margin-top:24px;">募集要項</a>
+            <a href="#" class="sitemap-main-link" style="margin-top:16px;">応募・各種申し込み</a>
             <a href="#" class="sitemap-main-link" style="margin-top:16px;">プライバシーポリシー</a>
           </div>
         </div>
@@ -1037,13 +1042,13 @@
       <div class="footer-inner">
         <div class="footer-left">
           <div class="footer-logo">
-            <img src="D02_colorのコピー.JPG" alt="中央歯科医院" style="height:54px;">
+            <img src="D02_color_transparent.png" alt="中央歯科医院" style="height:54px;">
           </div>
           <div class="recruit-badge">求人採用サイト</div>
           <div class="footer-btns">
             <a href="#" class="footer-btn">クリニックサイト <span class="arrow-circle" style="width:24px;height:24px;"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
             <a href="#" class="footer-btn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="6" stroke="#009688" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="#009688" stroke-width="2"/><circle cx="18" cy="6" r="1.5" fill="#009688"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="ig" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><rect x="2" y="2" width="20" height="20" rx="6" stroke="url(#ig)" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="5" stroke="url(#ig)" stroke-width="2" fill="none"/><circle cx="18" cy="6" r="1.5" fill="url(#ig)"/></svg>
               採用Instagram <span class="arrow-circle" style="width:24px;height:24px;"><svg viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
             </a>
           </div>
